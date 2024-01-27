@@ -1,0 +1,17 @@
+#Bergslagen, contains Falun, Västerås etc.
+
+
+culture = disorganized
+religion = animism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = iron
+base_manpower = 1
+capital = "Västerås"
+is_city = no
+
+
+
+
+

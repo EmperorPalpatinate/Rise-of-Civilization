@@ -1,0 +1,115 @@
+
+unloyal_general_disaster = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 75
+			NOT = { culture = root }
+			is_overseas = no
+		}
+		is_free_or_tributary_trigger = yes
+	}
+
+	
+	
+	can_start = {
+		num_of_owned_provinces_with = {
+			value = 75
+			NOT = { culture = root }
+			is_overseas = no
+		}
+		AND = {
+			had_recent_war = 2
+			NOT = { manpower_percentage = 0.40 }
+			has_leader_with = {
+				total_pips = 10
+			}
+			war_exhaustion = 5
+		}
+	}
+	
+	
+	can_stop = {
+		AND = {
+			stability = 1
+			legitimacy_equivalent = 50
+		}
+		OR = {
+			manpower_percentage = 0.50
+			NOT = { war_exhaustion = 2 }
+		}
+	}	
+	
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { ADM = 2 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { DIP = 2 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { MIL = 2 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 1
+			had_recent_war = 2
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = -2 }
+		}
+	}
+	
+	
+	
+	can_end = {
+		OR = {
+			NOT = { war_exhaustion = 2 }
+		}
+	}
+	
+
+	modifier = {
+		global_unrest = 2
+		discipline = -0.10
+		army_morale = -0.10
+		global_manpower = -20
+		global_manpower_modifier = -0.50
+		yearly_corruption = 0.25
+		stability_cost_modifier = 0.50
+	}	
+	
+	
+	on_start = unloyal_general.1
+	on_end = english_civil_war.100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			100 = civil_war.2
+			100 = civil_war.3
+			100 = civil_war.5
+			100 = civil_war.6
+			100 = civil_war.7
+			100 = civil_war.8
+			100 = civil_war.9
+			100 = civil_war.10
+			100 = civil_war.11
+			100 = civil_war.12
+			100 = civil_war.13
+		}
+	}
+}

@@ -1,0 +1,10 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_disaster_imperial_crisis"
+		texturefile = "gfx//interface//disasters//imperial_crisis.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+}

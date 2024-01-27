@@ -1,0 +1,134 @@
+
+defend_capital_revolt = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 0
+		prestige_factor = 0.1
+		peace_cost_factor = 0.10
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		required_treaty_to_take_provinces = {
+			revolt_annex
+		}
+		
+		can_use_peace_treaty = {
+			who = FROM
+			treaty = revolt_annex
+		}
+		
+		allow_annex = {
+			always = yes
+		}
+
+		peace_options = {
+			revolt_annex
+		}
+
+	}
+	
+	defender = {
+		badboy_factor = 0
+		prestige_factor = 0.1
+		peace_cost_factor = 0.01
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		can_use_peace_treaty = {
+			who = FROM
+			treaty = revolt_annex
+		}
+		
+		allow_annex = {
+			always = yes
+		}
+		
+		peace_options = {
+			revolt_annex
+		}
+	}
+	
+	war_name = INDEPENDENCE_WAR_NAME
+}
+
+foreign_invasion = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 0.60
+	}
+	
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 1	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		prov_desc = ALL_PROVS
+	}
+	war_name = PRIMITIVE_WAR_NAME	
+}
+
+invasion = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 1.25
+		prestige_factor = 1
+		peace_cost_factor = 0.2	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 1	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		prov_desc = ALL_PROVS
+	}	
+	
+	
+	war_name = PRIMITIVE_WAR_NAME	
+}

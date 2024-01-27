@@ -1,0 +1,17 @@
+#Hälsingland-Gästrikland-Medelpad, from Gävle to Näs
+
+
+culture = disorganized
+religion = animism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+capital = "Gävle"
+is_city = no
+
+
+
+
+1527.6.1 = { religion = protestant}

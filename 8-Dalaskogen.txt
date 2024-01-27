@@ -1,0 +1,17 @@
+#Dalaskogen, northwesten part of Dalarna, including Mora and entire Siljan area.
+
+
+culture = disorganized
+religion = animism
+hre = no
+base_tax = 1 
+base_tax = 1
+trade_goods = copper
+base_manpower = 1
+capital = "Mora"
+is_city = no
+
+
+extra_cost = 10
+
+add_province_triggered_modifier = stora_kopparberget_modifier

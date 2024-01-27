@@ -1,0 +1,73 @@
+namespace = roc_random
+
+####################################################
+# Random events! 10% more annoying stability events!
+####################################################
+country_event = {
+	id = roc_random.1
+	title = roc_random.1.t
+	desc = roc_random.1.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = { 
+		num_of_owned_provinces_with = {
+			value = 10
+			NOT = {
+				culture = ROOT
+			}
+		}
+		NOT = {
+			is_year = 300
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 250
+	}
+	
+	option = {
+		name = roc_random.1.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = -1
+		add_legitimacy = -10
+		add_war_exhaustion = 2
+		add_inflation = 2
+	}
+}
+country_event = {
+	id = roc_random.2
+	title = roc_random.2.t
+	desc = roc_random.2.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = { 
+		num_of_owned_provinces_with = {
+			value = 10
+			NOT = {
+				culture = ROOT
+			}
+		}
+		NOT = {
+			is_year = 300
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+	option = {
+		name = roc_random.2.a
+		ai_chance = {
+			factor = 1
+		}
+		add_legitimacy = -4
+		add_war_exhaustion = 2
+		add_inflation = 2
+		add_corruption = 2
+	}
+}

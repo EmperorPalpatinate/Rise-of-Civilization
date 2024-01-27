@@ -1,0 +1,816 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+###########################################
+# Offensive War
+###########################################
+fote_offensive_war = {
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		is_in_war = {
+			attacker_leader = ROOT
+		}
+	}
+	
+	war_exhaustion = 0.05
+	land_morale = -0.05
+	morale_damage_received = 0.05
+}
+###########################################
+# Defensive War
+###########################################
+fote_defensive_war = {
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		is_in_war = {
+			defender_leader = ROOT
+		}
+	}
+	
+	war_exhaustion = -0.05
+	land_morale = 0.05
+	morale_damage_received = -0.20
+	max_hostile_attrition = 2
+	hostile_attrition = 2
+	global_manpower_modifier = 0.20
+	land_forcelimit_modifier = 0.20
+	manpower_recovery_speed = 0.25
+}
+###########################################
+# Optimistic
+###########################################
+fote_optimistic = {
+	potential = {
+		prestige = 0
+	}
+	
+	trigger = {
+		prestige = 75
+	}
+	
+	legitimacy = 0.20
+	republican_tradition = 0.20
+	army_morale = 0.10
+	morale_damage_received = -0.10
+	enemy_core_creation = 0.25
+	global_manpower_modifier = 0.25
+	land_forcelimit_modifier = 0.25
+	core_creation = -0.10
+	ae_impact = -0.10
+	war_exhaustion_cost = -0.50
+	war_exhaustion = -0.03
+}
+
+###########################################
+# Nihilism
+###########################################
+fote_nihilism = {
+	potential = {
+		NOT = { prestige = -40 }
+	}
+	
+	trigger = {
+		NOT = { prestige = -40 }
+	}
+	
+	prestige = -1
+	legitimacy = -1
+	republican_tradition = -0.25
+	army_morale = -0.10
+	morale_damage_received = 0.10
+	all_power_cost = 0.10
+	global_unrest = 2
+	enemy_core_creation = -0.50
+	global_manpower_modifier = -0.25
+	stability_cost_modifier = 0.25
+}
+
+###########################################
+# High ADM skill
+###########################################
+fote_high_adm = {
+	potential = {
+		adm = 5
+	}
+	
+	trigger = {
+		adm = 5
+	}
+	
+	governing_capacity_modifier = 0.1
+	global_unrest = -1
+	stability_cost_modifier = -0.25
+	administrative_efficiency = 0.05
+	core_creation = -0.10
+	development_cost = -0.10
+	adm_tech_cost_modifier = -0.10
+	production_efficiency = 0.10
+	all_estate_loyalty_equilibrium = 0.05
+	prestige = 0.25
+	legitimacy = 0.50
+}
+
+###########################################
+# High DIP skill
+###########################################
+fote_high_dip = {
+	potential = {
+		dip = 5
+	}
+	
+	trigger = {
+		dip = 5
+	}
+	
+	governing_capacity_modifier = 0.1
+	global_trade_power = 0.2
+	liberty_desire = -10
+	ae_impact = -0.10
+	diplomatic_reputation = 1
+	diplomatic_upkeep = 1
+	development_cost = -0.10
+	naval_morale = 0.20
+	dip_tech_cost_modifier = -0.10
+	all_estate_loyalty_equilibrium = 0.05
+	prestige = 0.25
+	improve_relation_modifier = 0.30
+	legitimacy = 0.50
+}
+###########################################
+# High MIL skill
+###########################################
+fote_high_mil = {
+	potential = {
+			mil = 5
+	}
+	
+	trigger = {
+		mil = 5
+	}
+	
+	governing_capacity_modifier = 0.1
+	discipline = 0.05
+	development_cost = -0.10
+	army_morale = 0.10
+	mil_tech_cost_modifier = -0.10
+	global_manpower_modifier = 0.20
+	infantry_power = 0.05
+	morale_damage_received = -0.10
+	all_estate_loyalty_equilibrium = 0.05
+	prestige = 0.25
+	yearly_army_professionalism = 0.01
+	legitimacy = 0.50
+}
+
+###########################################
+# Low ADM skill
+###########################################
+fote_low_adm = {
+	potential = {
+		NOT = {
+			adm = 2
+		}	
+	}
+	
+	trigger = {
+		NOT = {
+			adm = 2
+		}
+	}
+	
+	governing_capacity_modifier = -0.10
+	global_unrest = 1
+	stability_cost_modifier = 0.25
+	administrative_efficiency = -0.10
+	core_creation = 0.20
+	development_cost = 0.10
+	adm_advisor_cost = 0.5
+	adm_tech_cost_modifier = 0.10
+	yearly_corruption = 0.10
+	production_efficiency = -0.10
+	all_estate_loyalty_equilibrium = -0.10
+	prestige = -0.50
+	yearly_corruption = 0.15
+	legitimacy = -0.50
+}
+
+###########################################
+# Low DIP skill
+###########################################
+fote_low_dip = {
+	potential = {
+		NOT = {
+			dip = 2
+		}	
+	}
+	
+	trigger = {
+		NOT = {
+			dip = 2
+		}
+	}
+	
+	governing_capacity_modifier = -0.10
+	global_trade_power = -0.2
+	liberty_desire = 20
+	global_unrest = 1
+	ae_impact = 0.10
+	diplomatic_reputation = -1
+	diplomatic_upkeep = -1
+	development_cost = 0.10
+	dip_advisor_cost = 0.5
+	naval_morale = -0.20
+	dip_tech_cost_modifier = 0.10
+	yearly_corruption = 0.10
+	stability_cost_modifier = 0.25
+	all_estate_loyalty_equilibrium = -0.10
+	prestige = -0.50
+	improve_relation_modifier = -0.25
+	yearly_corruption = 0.15
+	legitimacy = -0.50
+}
+###########################################
+# Low MIL skill
+###########################################
+fote_low_mil = {
+	potential = {
+		NOT = {
+			mil = 2
+		}	
+	}
+	
+	trigger = {
+		NOT = {
+			mil = 2
+		}
+	}
+	
+	governing_capacity_modifier = -0.10
+	discipline = -0.05
+	development_cost = 0.10
+	mil_advisor_cost = 0.5
+	army_morale = -0.10
+	stability_cost_modifier = 0.25
+	global_unrest = 1
+	mil_tech_cost_modifier = 0.10
+	global_manpower_modifier = -0.20
+	infantry_power = -0.10
+	morale_damage_received = 0.20
+	yearly_corruption = 0.10
+	all_estate_loyalty_equilibrium = -0.10
+	prestige = -0.50
+	yearly_army_professionalism = -0.01
+	yearly_corruption = 0.15
+	legitimacy = -0.50
+}
+
+###########################################
+# Unloyal Subjects
+###########################################
+fote_subjects_unloyal = {
+	potential = {
+		overextension_percentage = 0.01
+	}
+	
+	trigger = {
+		overextension_percentage = 0.60
+	}
+	
+	governing_capacity_modifier = -0.1
+	global_unrest = 2
+	global_tax_modifier = -0.10
+	global_manpower_modifier = -0.10
+	defensiveness = -0.20
+	stability_cost_modifier = 0.25
+	global_trade_power = -0.1
+	production_efficiency = -0.20
+	all_estate_loyalty_equilibrium = -0.10
+	prestige = -0.25
+}
+
+###########################################
+# Rising Nationalism
+###########################################
+fote_rising_nationalism = {
+	potential = {
+		is_year = 1650
+	}
+	
+	trigger = {
+		is_year = 1650
+	}
+	
+	governing_capacity_modifier = 0.1
+	liberty_desire = 10
+	global_unrest = 1
+	stability_cost_modifier = 0.20
+	war_exhaustion_cost = 0.25
+	global_tax_modifier = -0.25
+	land_maintenance = 0.20
+	ae_impact = 0.10
+	core_creation = 0.10
+	legitimacy = -1
+	meritocracy = -0.50
+	republican_tradition = 0.20
+	hostile_attrition = 1
+	max_hostile_attrition = 1
+	global_missionary_strength = -0.02
+}
+###########################################
+# Empire in Decline
+###########################################
+fote_empire_in_decline = {
+	potential = {
+		OR = {
+			grown_by_development = 4000
+			AND = {
+				tag = MNG
+				grown_by_development = 2500
+			}
+			AND = {
+				tag = ROM
+				grown_by_development = 1000
+			}
+		}
+	}
+	
+	trigger = {
+		always = yes
+	}
+	
+	governing_capacity_modifier = -0.2
+	global_unrest = 1
+	liberty_desire = 20
+	ae_impact = 0.1
+	core_creation = 0.2
+	enemy_core_creation = -0.25
+	administrative_efficiency = -0.10
+	discipline = -0.05
+	republican_tradition = -1
+	devotion = -1
+	meritocracy = -1
+	legitimacy = -1
+	stability_cost_modifier = 0.25
+	yearly_corruption = 0.20
+	yearly_army_professionalism = -0.01
+	land_morale = -0.10
+	navy_morale = -0.10
+	prestige = -1.00
+}
+###########################################
+# Peasants Unloyal
+###########################################
+fote_peasant_unloyal = {
+	potential = {
+		unrest = 1
+	}
+	
+	trigger = {
+		unrest = 3
+	}
+	
+	governing_capacity_modifier = -0.1
+	global_unrest = 3
+	development_cost = 0.20
+	global_tax_modifier = -0.10
+	global_manpower_modifier = -0.10
+	defensiveness = -0.20
+	stability_cost_modifier = 0.20
+	global_trade_power = -0.1
+	production_efficiency = -0.10
+	all_estate_loyalty_equilibrium = -0.10
+	prestige = -0.25
+}
+
+###########################################
+# Army Unloyal
+###########################################
+fote_army_unloyal = {
+	potential = {
+		manpower_percentage = 0.20
+	}
+	
+	trigger = {
+		NOT = { manpower_percentage = 0.40 }
+		OR = {
+			is_at_war = yes
+			has_leader_with = {
+				total_pips = 10
+			}
+			had_recent_war = 1
+		}
+	}
+	army_morale = -0.05
+	discipline = -0.05
+	land_forcelimit_modifier = -0.25
+	yearly_corruption = 0.10
+	all_estate_loyalty_equilibrium = -0.10
+	prestige = -0.25
+}
+
+###########################################
+# Standing Army
+###########################################
+fote_standing_army = {
+	potential = {
+		army_professionalism = 0.10
+	}
+	
+	trigger = {
+		OR = {
+			army_professionalism = 0.75
+			army_tradition = 70
+		}
+	}
+	army_morale = 0.10
+	morale_damage_received = -0.10
+	discipline = 0.10
+	drill_decay_modifier = -0.25
+	infantry_power = 0.10
+	prestige = 0.25
+}
+###########################################
+# Stable Empire
+###########################################	
+fote_stable_empire = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 1
+			NOT = { culture = root }
+			is_overseas = no
+		}
+	}
+	
+	trigger = {
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 5
+				NOT = { culture = root }
+				is_overseas = no
+			}
+			num_of_owned_provinces_with = {
+				value = 40
+			}
+		}
+		OR = {
+			NOT = { tag = MNG }
+			is_year = 1500
+		}
+		NOT = {
+			war_exhaustion = 5
+			corruption = 10
+		}
+		OR = {
+			AND = {
+				is_nomad = yes
+				is_at_war = yes
+			}
+			AND = {
+				stability = 3
+				legitimacy_equivalent = 90
+				is_nomad = no
+			}
+		}
+	}
+
+	governing_capacity_modifier = 0.10
+	administrative_efficiency = 0.05
+	global_trade_power = 0.20
+	production_efficiency = 0.20
+	ae_impact = 0.20
+	development_cost = -0.20
+	global_tax_modifier = 0.10
+	global_manpower_modifier = 0.50
+	technology_cost = -0.05
+	yearly_corruption = -0.10
+	all_estate_loyalty_equilibrium = 0.1
+	war_exhaustion = -0.03
+	movement_speed = -0.10
+	army_tradition = 0.10
+	enemy_core_creation = -0.1
+	prestige = 0.10
+	legitimacy = 0.10
+	improve_relation_modifier = 0.30
+	republican_tradition = 0.10
+	meritocracy = 0.10
+	horde_unity = 0.10
+	devotion = 0.10
+	yearly_corruption = 0.10
+}
+
+###########################################
+# City-state
+###########################################	
+fote_city_state = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 1
+			is_overseas = no
+		}
+		is_nomad = no
+	}
+	
+	trigger = {
+		NOT = {
+			num_of_owned_provinces_with = {
+				value = 1
+			}
+		}
+		NOT = { grown_by_development = 750 }
+		NOT = { tag = MNG }
+	}
+
+	governing_capacity_modifier = 0.1
+	administrative_efficiency = 0.05
+	defensiveness = 0.10
+	hostile_attrition = 1
+	max_hostile_attrition = 1
+	ae_impact = -0.10
+	all_power_cost = -0.10
+	development_cost = -0.10
+	diplomatic_reputation = 1
+	diplomatic_upkeep = 2
+	yearly_corruption = -0.10
+	own_territory_dice_roll_bonus = 2
+	morale_damage_received = -0.20
+	army_morale = 0.20
+	recover_army_morale_speed = 0.50
+	movement_speed = 0.10
+	yearly_army_professionalism = -0.01
+	army_tradition = 1
+	global_manpower_modifier = 0.10
+	garrison_size = 0.25
+	enemy_core_creation = 0.2
+	global_unrest = -2
+	religious_unity = 0.20
+	global_missionary_strength = 0.01
+}
+###########################################
+# Massive Empire
+###########################################	
+fote_massive_empire = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 1
+			NOT = { culture = root }
+		}
+	}
+	
+	trigger = {
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 75
+				NOT = { culture = root }
+				is_overseas = no
+			}
+			num_of_owned_provinces_with = {
+				value = 200
+			}
+		}
+		OR = {
+			NOT = { tag = MNG }
+			is_year = 1500
+		}
+	}
+	
+	governing_capacity_modifier = -0.1
+	global_unrest = 1
+	stability_cost_modifier = 0.25
+	administrative_efficiency = -0.10
+	global_manpower_modifier = 0.50
+	movement_speed = -0.10
+	ae_impact = 0.10
+	enemy_core_creation = -0.2
+	prestige = -0.25
+	legitimacy = -0.25
+	republican_tradition = -0.25
+	meritocracy = -0.25
+	horde_unity = -0.25
+	devotion = -0.25
+	yearly_corruption = 0.20
+}
+
+###########################################
+# Empire
+###########################################	
+fote_large_empire = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 1
+			NOT = { culture = root }
+		}
+	}
+	
+	trigger = {
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 5
+				NOT = { culture = root }
+				is_overseas = no
+			}
+			num_of_owned_provinces_with = {
+				value = 40
+			}
+		}
+		OR = {
+			NOT = { tag = MNG }
+			is_year = 1500
+		}
+		NOT = {
+			war_exhaustion = 10
+			corruption = 30
+		}
+		legitimacy_equivalent = 60
+		stability = 1
+		OR = {
+			NOT = {	stability = 3 }
+			NOT = {	legitimacy_equivalent = 90 }
+			war_exhaustion = 5
+			corruption = 10
+		}
+	}
+	
+	global_unrest = 1
+	governing_capacity_modifier = -0.1
+	stability_cost_modifier = 0.25
+	ae_impact = 0.20
+	development_cost = -0.10
+	technology_cost = -0.05
+	yearly_corruption = 0.10
+	all_estate_loyalty_equilibrium = -0.1
+	land_attrition = 0.25
+	recover_army_morale_speed = -0.15
+	war_exhaustion = 0.05
+	movement_speed = -0.10
+	army_tradition = -0.05
+	global_manpower_modifier = 0.50
+	enemy_core_creation = -0.2
+	improve_relation_modifier = 0.25
+	prestige = -0.20
+	legitimacy = -0.20
+	republican_tradition = -0.20
+	meritocracy = -0.20
+	horde_unity = -0.20
+	devotion = -0.20
+	yearly_corruption = 0.15
+}
+
+###########################################
+# AI Assistance
+###########################################
+fote_ai_assist = {
+	potential = {
+		ai = yes
+	}
+	
+	trigger = {
+		ai = yes
+	}
+	global_unrest = -2
+	all_estate_loyalty_equilibrium = 0.1
+}
+###########################################
+# Unstable
+###########################################	
+fote_unstable_empire = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 1
+			NOT = { culture = root }
+			is_overseas = no
+		}
+	}
+	
+	trigger = {
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 5
+				NOT = { culture = root }
+				is_overseas = no
+			}
+			num_of_owned_provinces_with = {
+				value = 40
+			}
+		}
+		OR = {
+			NOT = { tag = MNG }
+			is_year = 1500
+		}
+		NOT = {
+			war_exhaustion = 15
+			corruption = 60
+		}
+		OR = {
+			NOT = { legitimacy_equivalent = 60 }
+			NOT = { stability = 1 }
+			war_exhaustion = 10
+			corruption = 30
+			AND = {
+				is_at_war = no
+				is_nomad = yes
+			}
+		}
+		legitimacy_equivalent = 30
+		stability = -2
+	}
+
+	governing_capacity_modifier = -0.2
+	global_unrest = 2
+	stability_cost_modifier = 0.50
+	global_tax_modifier = -0.20
+	global_trade_power = -0.20
+	production_efficiency = -0.20
+	land_morale = -0.10
+	land_forcelimit_modifier = -0.10
+	land_maintenance = 0.10
+	administrative_efficiency = 0.025
+	yearly_corruption = 0.20
+	all_estate_loyalty_equilibrium = -0.1
+	land_attrition = 0.40
+	recover_army_morale_speed = -0.15
+	war_exhaustion = 0.05
+	movement_speed = -0.10
+	army_tradition = -0.05
+	global_manpower_modifier = 0.50
+	ae_impact = 0.20
+	enemy_core_creation = -0.25
+	prestige = -0.40
+	legitimacy = -0.40
+	republican_tradition = -0.40
+	meritocracy = -0.40
+	horde_unity = -0.40
+	devotion = -0.40
+	yearly_corruption = 0.25
+}
+
+###########################################
+# Imperial Crisis
+###########################################	
+fote_imperial_crisis = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 1
+			NOT = { culture = root }
+			is_overseas = no
+		}
+	}
+	
+	trigger = {
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 5
+				NOT = { culture = root }
+				is_overseas = no
+			}
+			num_of_owned_provinces_with = {
+				value = 40
+			}
+		}
+		OR = {
+			NOT = { tag = MNG }
+			is_year = 1500
+		}
+		OR = {
+			NOT = {	legitimacy_equivalent = 30 }
+			NOT = { stability = -2 }
+			war_exhaustion = 15
+			corruption = 60
+		}
+	}
+
+	governing_capacity_modifier = -0.5
+	global_unrest = 4
+	stability_cost_modifier = 1
+	global_tax_modifier = -0.25
+	global_trade_power = -0.25
+	production_efficiency = -0.25
+	land_maintenance = 0.25
+	land_forcelimit_modifier = -0.25
+	land_morale = -0.20
+	republican_tradition = -1.0
+	devotion = -1.0
+	horde_unity = -1.0
+	all_power_cost = 0.10
+	yearly_corruption = 0.50
+	all_estate_loyalty_equilibrium = -0.1
+	land_attrition = 0.60
+	recover_army_morale_speed = -0.15
+	war_exhaustion = 0.10
+	movement_speed = -0.10
+	army_tradition = -0.05
+	global_manpower_modifier = 0.50
+	ae_impact = 0.20
+	enemy_core_creation = -0.5
+	prestige = -1
+	legitimacy = -1
+	devotion = -1
+	yearly_corruption = 0.40
+}

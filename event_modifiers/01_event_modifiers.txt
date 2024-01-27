@@ -1,0 +1,18 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+
+revanchism = {
+	discipline = 0.05
+	land_morale = 0.20
+	morale_damage_received = -0.10
+	morale_damage = 0.10
+	fire_damage = 0.10
+	war_exhaustion = -0.05
+	global_manpower_modifier = 0.20
+	manpower_recovery_speed = 0.50
+	max_hostile_attrition = 2
+	hostile_attrition = 2
+	global_tax_modifier = 0.20
+	production_efficiency = 0.20
+}

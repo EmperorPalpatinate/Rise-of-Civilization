@@ -1,0 +1,304 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+# ai_will do is only used to determine which idea group is picked if AI_USES_HISTORICAL_IDEA_GROUPS define is 0, OR start is custom/random
+# ai never picks an idea that resolves to ai_will_do = 0, even if AI_USES_HISTORICAL_IDEA_GROUPS = 1
+# ROOT = country picking the idea
+# groups set to colonial=yes will be higher prioritized by the AI when spending power
+
+#ideas in the group can have effect = {} and removed_effect = {}
+
+liberty_ideas = {
+	category = DIP
+	
+	bonus = {
+		technology_cost = -0.05
+	}
+	
+	autonomous_regions = {
+		state_maintenance_modifier = -0.10
+	}
+	
+	free_expression = {
+		idea_cost = -0.05
+	}
+	
+	tolerance_of_heathens = {
+		tolerance_heathen = 1
+	}
+	
+	tolerance_of_heretics = {
+		tolerance_heretic = 1
+	}
+	
+	basic_rights = {
+		global_unrest = -1
+	}
+
+	innovative = {
+		innovativeness_gain = 0.5
+	}
+	
+	meritocracy = {
+		advisor_cost = -0.25
+	}
+}
+
+tradition_ideas = {
+	category = ADM
+	
+	bonus = {
+		prestige = 0.50
+	}
+	
+	code_of_laws = {
+		stability_cost_modifier = -0.20
+	}
+	
+	rulership tradition = {
+		legitimacy = 0.50
+	}
+	
+	code_of_warfare = {
+		land_morale = 0.10
+	}
+	
+	traditional_lands = {
+		state_governing_cost = -0.1
+	}
+	
+	defense_of_homeland = {
+		defensiveness = 0.10
+	}
+	
+	community = {
+		development_cost = -0.10
+	}
+	
+	strong_identity
+		culture_conversion_time = -0.1
+		culture_conversion_cost = -0.10
+	}
+}
+
+honor_ideas = {
+	category = MIL
+	
+	bonus = {
+		fire_damage = 0.10
+		land_forcelimit_modifier = -0.05
+	}
+	
+	army_traditions = {
+		army_tradition = 0.50
+	}
+	
+	only_the_best = {
+		infantry_power = 0.05
+	}
+	
+	better_equipment = {
+		fire_damage_received = -0.10
+		infantry_cost = 0.05
+	}
+	
+	disciplined = {
+		discipline = 0.05
+	}
+	
+	tactical_manuevering = {
+		military_tactics = 0.25
+	}
+	
+	recruitment = {
+		manpower_in_culture_group_provinces = 0.1
+	}
+	
+	comradery = {
+		land_morale = 0.10
+	}
+}
+	
+agriculture_deas = {
+	category = ADM
+	
+	bonus = {
+		development_cost = -0.1
+	}
+	
+	optimism = {
+		war_exhaustion = -0.05
+	}
+	
+	communal = {
+		global_unrest = -1
+	}
+	
+	religious = {
+		global_missionary_strength = 0.01
+	}
+	
+	stubborn = {
+		defensiveness = 0.15
+	}
+	
+	pioneers = {
+		global_colonial_growth = 15
+	}
+	
+	working_the_land = {
+		production_efficiency = 0.10
+	}
+	
+	outdoorsmanship = {
+		movement_speed = 0.15
+		hostile_attrition = 1
+	}
+}
+
+trade_ideas = {
+	category = DIP
+
+	bonus = {
+		merchants = 1
+		burghers_loyalty_modifier = 0.1
+		jains_loyalty_modifier = 0.1
+		vaisyas_loyalty_modifier = 0.1
+	}
+
+	shrewd_commerce_practise = {
+ 		global_trade_power = 0.2
+  	}
+  	free_trade = {
+  		merchants = 1
+		global_institution_spread = 0.2
+  	}
+	merchant_adventures = {
+		trade_range_modifier = 0.25
+	}
+	national_trade_policy = {
+		trade_efficiency = 0.1
+		mercantilism_cost = -0.25
+	}
+	overseas_merchants = {
+		placed_merchant_power = 15
+	}
+	trade_manipulation = {
+		trade_steering = 0.25
+	}
+	fast_negotiations = {
+		caravan_power = 0.25
+	}
+
+	ai_will_do = {
+		factor = 0.4
+		modifier = {
+			factor = 0
+			NOT = { num_of_cities = 6 }
+			NOT = { has_government_attribute = is_merchant_republic }
+		}
+		modifier = {
+			factor = 2
+			has_government_attribute = is_merchant_republic
+		}
+		modifier = {
+			factor = 1.25
+			personality = ai_capitalist 
+			trade_income_percentage = 0.35
+		}
+		modifier = {
+			factor = 1.25
+			home_trade_node = {
+				trade_share = {
+					country = ROOT 
+					share = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_idea_group = infrastructure_ideas
+				has_idea_group = economic_ideas
+			}
+		}
+	}
+}
+
+naval_ideas = {
+	category = MIL
+	
+	bonus = {
+		may_explore = yes
+		may_perform_slave_raid = yes
+		coast_raid_range = 1
+	}
+	
+	overseas_exploration = {
+		range = 0.25
+		trade_efficiency = 0.10
+	}
+	
+	merchant_marine = {
+		global_sailors_modifier = 0.5
+		allowed_marine_fraction = 0.25
+	}
+	
+	merchant_traditions = {
+		sea_repair = yes
+		movement_speed_in_fleet_modifier = 1
+		siege_blockade_progress = 1
+	}
+	naval_drill = {
+		naval_morale = 0.10
+		naval_attrition = -0.25
+		privateer_efficiency = 0.5
+	}
+	
+	colonisation_of_faraway_land = {
+		colonists = 1
+		effect = { remove_temporary_colonist = yes }
+	}
+	
+	improved_rams = {
+		galley_power = 0.25
+		ship_durability = 0.05
+	}
+	
+	naval_warfare = {
+		global_naval_barrage_cost = -1
+		landing_penalty = -1
+		blockade_efficiency = 1
+	}
+	
+	ai_will_do = {
+		factor = 0.45
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+			NOT = { is_colonial_nation = yes }
+		}
+		modifier = {
+			factor = 0.31
+			NOT = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 0.31
+			num_of_cities = 50
+		}
+
+		modifier = {
+			factor = 10
+			has_government_attribute = is_pirate_republic_reform
+		}
+	}
+}

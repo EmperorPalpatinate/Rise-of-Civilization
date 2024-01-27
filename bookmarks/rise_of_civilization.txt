@@ -1,0 +1,19 @@
+bookmark =
+{
+	name = "rise_of_civilization"
+	desc = "rise_of_civilization_desc"
+	date = 1.11.11
+	
+	center = 112
+	default = yes
+	
+	country = ABC
+	country = AIC
+	country = AEC
+	country = ACC
+	
+	easy_country = AIC
+	easy_country = ABC
+	easy_country = AEC
+	easy_country = ACC
+}

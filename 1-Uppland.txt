@@ -1,0 +1,19 @@
+#Uppland, contains Stockholm, Uppsala & Nyköping.
+
+
+culture = disorganized
+religion = animism
+hre = no
+base_tax = 1 
+base_tax = 1
+trade_goods = grain
+base_manpower = 1
+capital = "Stockholm"
+is_city = no
+
+
+
+
+extra_cost = 16
+center_of_trade = 2
+

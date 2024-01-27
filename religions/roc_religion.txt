@@ -1,0 +1,876 @@
+# If you add religions, and use those tags, do not change them without changing everywhere they are used.
+
+# Uses all 'modifiers' possible thats exported as a Modifier.
+
+hellenic = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+
+	hellenism = {
+		color = { 100 0 80 }
+		icon = 19
+		province = {
+			local_missionary_strength = 0.03
+		}
+		country = {
+			global_tax_modifier = 0.05
+			tolerance_heathen = 2
+		}
+		country_as_secondary = {
+			infantry_power = 0.1
+			global_tax_modifier = 0.1
+		}
+
+		personal_deity = yes
+
+		heretic = { SERAPIS }
+	}
+	hellenism_reformed = {
+		color = { 120 20 120 }
+		icon = 19
+		province = {
+			local_missionary_strength = -0.03
+		}
+		country = {
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			infantry_power = 0.1
+			global_tax_modifier = 0.1
+		}
+
+		personal_deity = yes
+
+		heretic = { SERAPIS }
+	}
+	harmonized_modifier = harmonized_hellenic
+	
+	crusade_name = CRUSADE
+}
+celtic = {
+	druidism = {
+		color = { 80 180 20 }
+		icon = 27
+		province = {
+			local_missionary_strength = 0.02
+		}
+		country = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+
+		personal_deity = yes
+		
+		heretic = { GOAT_SKULL }
+	}
+	druidism_reformed = {
+		color = { 100 200 20 }
+		icon = 27
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country = {
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+
+		personal_deity = yes
+		
+		heretic = { GOAT_SKULL }
+	}
+	
+	harmonized_modifier = harmonized_hellenic
+	
+	crusade_name = CRUSADE
+}
+
+iranian = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 110 110 }
+
+	zoroastrian = {
+		icon = 21
+		color = { 127 178 51 }
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country = {
+			tolerance_own = 2
+			trade_efficiency = 0.1
+		}
+		country_as_secondary = {
+			merchants = 1
+			tolerance_own = 1
+		}
+		
+		holy_sites = { 421 4430 2223 441 2235 }
+
+		blessings = {
+			blessing_yasna
+			blessing_haoma
+			blessing_navjote
+			blessing_manthras
+			blessing_dakhma
+		}
+		
+		heretic = { MAZDAKI ZURVANITE }	
+	}
+
+	
+	harmonized_modifier = harmonized_zoroastrian_group
+
+	crusade_name = CRUSADE
+}
+
+jewish_group = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 106 107 }
+
+	jewish = {
+		color = { 100 160 210 }
+		icon = 22
+		country = {
+			tolerance_own = 2
+			advisor_pool = 1
+		}
+		country_as_secondary = {
+			advisor_pool = 1
+			advisor_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+		uses_judaism_power = yes
+		aspects_name = JEWISH_ASPECTS
+			
+		aspects = {
+			judaism_rosh_hashanah_aspect
+			judaism_simchat_torah_aspect
+			judaism_sukkot_aspect
+			judaism_communities_aspect
+			jewish_abrahamic_aspect
+			judaism_diplomatic_rabbi_aspect
+			judaism_yom_kippur_aspect
+			judaism_remember_passover_aspect
+			judaism_purim_teachings_aspect
+		}
+		
+		heretic = { SAMARITAN KARAITE }
+	
+		celebrate = {
+			cost = 200
+			potential = {
+			}
+			allow = {
+				custom_trigger_tooltip = {
+					tooltip = JUDAISM_HAS_ADM_ASPECT
+					OR = {
+						has_church_aspect = judaism_rosh_hashanah_aspect
+						has_church_aspect = judaism_simchat_torah_aspect
+						has_church_aspect = judaism_sukkot_aspect
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = judaism_rosh_hashanah_aspect
+					}
+					NOT = { stability = 3 }
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						has_church_aspect = judaism_rosh_hashanah_aspect
+					}
+					add_stability = 1
+				}
+				if = {
+					limit = {
+						has_church_aspect = judaism_simchat_torah_aspect
+					}
+					change_government_reform_progress = 20
+					add_legitimacy_equivalent = {
+						amount = 5
+						republican_tradition = 5
+					}
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						add_heir_claim = 5
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = judaism_sukkot_aspect
+					}
+					add_years_of_income = 0.3
+					add_inflation = -1
+				}
+				if = {
+					limit = {
+						has_government_attribute = loyalty_from_celebration
+					}
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = { NOT = { has_country_flag = has_celebrated_festival } }
+						set_country_flag = has_celebrated_festival
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							NOT = { has_church_aspect = judaism_communities_aspect }
+							NOT = { has_church_aspect = jewish_abrahamic_aspect }
+							NOT = { has_church_aspect = judaism_diplomatic_rabbi_aspect }
+						}
+						AND = {
+							NOT = { has_church_aspect = judaism_yom_kippur_aspect }
+							NOT = { has_church_aspect = judaism_remember_passover_aspect }
+							NOT = { has_church_aspect = judaism_purim_teachings_aspect }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	harmonized_modifier = harmonized_jewish_group
+
+	crusade_name = HOLY_WAR
+}
+
+american_pagan = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+
+	totemism = {
+		color = { 157 120 120 }
+		icon = 24
+		country = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+
+		ancestors = yes
+		
+		heretic = { BEAR_SPIRIT }	
+	}
+
+	totemism_reformed = {
+		color = { 145 110 110 }
+		icon = 24
+		country = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+
+		ancestors = yes
+		
+		heretic = { BEAR_SPIRIT }	
+	}
+	mesoamerican_religion_reformed = {
+		color = { 127 25 178 }
+		icon = 25
+		country = {
+			tolerance_own = 1
+			advisor_pool = 1
+		}
+		country_as_secondary = {
+			advisor_pool = 1
+			stability_cost_modifier = -0.1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		religious_reforms = no
+		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
+		
+		heretic = { MESOAMERICAN_HERETIC }
+	}
+	mesoamerican_religion = {
+		color = { 127 25 178 }
+		icon = 25
+		country = {
+			tolerance_own = 1
+			advisor_pool = 1
+		}
+		country_as_secondary = {
+			advisor_pool = 1
+			stability_cost_modifier = -0.1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		religious_reforms = no
+		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
+		
+		heretic = { MESOAMERICAN_HERETIC }
+	}
+
+
+	nahuatl_reformed = {
+		color = { 60 135 44 }
+		icon = 42
+		country = {
+			land_morale = 0.1
+			global_unrest = -2
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			raze_power_gain = 0.2
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		doom = yes
+		declare_war_in_regency = yes
+		religious_reforms = no
+		reform_tooltip = NAHUATL_REFORM_TOOLTIP
+		
+		heretic = { NAHUATL_HERETIC }	
+	}
+	nahuatl = {
+		color = { 64 115 64 }
+		icon = 42
+		country = {
+			land_morale = 0.1
+			global_unrest = -2
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			raze_power_gain = 0.2
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		doom = yes
+		declare_war_in_regency = yes
+		religious_reforms = no
+		reform_tooltip = NAHUATL_REFORM_TOOLTIP
+		
+		heretic = { NAHUATL_HERETIC }	
+	}
+	inti_reformed = {
+		color = { 70 125 125 }
+		icon = 43
+		country = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		authority = yes
+		religious_reforms = no
+		reform_tooltip = INTI_REFORM_TOOLTIP
+		
+		heretic = { INTI_HERETIC }	
+	}
+	inti = {
+		color = { 64 115 115 }
+		icon = 43
+		country = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		authority = yes
+		religious_reforms = no
+		reform_tooltip = INTI_REFORM_TOOLTIP
+		
+		heretic = { INTI_HERETIC }	
+	}
+	
+	harmonized_modifier = harmonized_american
+
+	crusade_name = CRUSADE
+}
+baltic_pagan = {
+	romuva = {
+		color = { 150 120 60 }
+		icon = 28
+		province = {
+			local_missionary_strength = 0.02
+		}
+		country = {
+			enemy_core_creation = 0.2
+			hostile_attrition = 1
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			tolerance_heathen = 2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+	romuva_reformed = {
+		color = { 140 100 70 }
+		icon = 28
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country = {
+			enemy_core_creation = 0.2
+			hostile_attrition = 1
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			tolerance_heathen = 2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+	harmonized_modifier = harmonized_north_european
+
+	crusade_name = CRUSADE
+}
+
+suomenusko_pagan = {
+	suomenusko = {
+		color = { 120 100 0 }
+		icon = 30
+		province = {
+			local_missionary_strength = 0.02
+		}
+		country = {
+			hostile_attrition = 1
+			defensiveness = 0.2
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			global_tax_modifier = 0.1
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+	suomenusko_reformed = {
+		color = { 140 90 0 }
+		icon = 30
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country = {
+			hostile_attrition = 1
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			global_tax_modifier = 0.1
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+	harmonized_modifier = harmonized_north_european
+
+	crusade_name = CRUSADE
+}
+slavic_pagan = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+
+	slavic = {
+		color = { 40 120 170 }
+		icon = 29
+		province = {
+			local_missionary_strength = 0.01
+		}
+		country = {
+			defensiveness = 0.2
+			enemy_core_creation = 0.2
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			defensiveness = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+	slavic_reformed = {
+		color = { 50 140 200 }
+		icon = 29
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country = {
+			enemy_core_creation = 0.2
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			defensiveness = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+
+	
+	harmonized_modifier = harmonized_north_european
+
+	crusade_name = CRUSADE
+}
+
+german_pagan = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+
+	norse_pagan_unreformed = {
+		color = { 120 120 120 }
+		icon = 31
+		province = {
+			local_missionary_strength = 0.02
+		}
+		country = {
+			land_maintenance_modifier = -0.10
+			global_manpower_modifier = 0.2
+			land_morale = 0.10
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			galley_power = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { OLD_NORSE }	
+	}
+	norse_pagan_reformed = {
+		color = { 120 120 120 }
+		icon = 31
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country = {
+			galley_power = 0.1
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			galley_power = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { OLD_NORSE }	
+	}
+	
+	harmonized_modifier = harmonized_german
+
+	crusade_name = CRUSADE
+}
+
+african_pagan = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+
+	egyptian = {
+		color = { 210 210 80 }
+		icon = 39
+		province = {
+			local_missionary_strength = 0.02
+		}
+		country = {
+			tolerance_heretic = 1
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			build_cost = -0.1
+			defensiveness = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+
+	egyptian_reformed = {
+		color = { 230 200 60 }
+		icon = 39
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country = {
+		}
+		country_as_secondary = {
+			build_cost = -0.1
+			defensiveness = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+
+	shamanism = { #Fetishism
+		color = { 127 76 76 }
+		icon = 34
+		country = {
+			tolerance_heathen = 2
+			diplomatic_reputation = 1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+
+		fetishist_cult = yes
+		heretic = { GOAT_SKULL }
+	}
+
+	shamanism_reformed = { #Fetishism
+		color = { 100 70 70 }
+		icon = 34
+		country = {
+			tolerance_heathen = 2
+			diplomatic_reputation = 1
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+
+		fetishist_cult = yes
+		heretic = { GOAT_SKULL }
+	}
+	
+	harmonized_modifier = harmonized_african
+
+	crusade_name = CRUSADE
+}
+
+mesopotamian = {
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+
+	ashurism = {
+		color = { 210 210 210 }
+		icon = 37
+		province = {
+			local_missionary_strength = 0.01
+		}
+		country = {
+			tolerance_heathen = 1
+			defensiveness = 0.1
+		}
+		country_as_secondary = {
+			global_regiment_recruit_speed = -0.10
+			defensiveness = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+		
+		annex = yes
+	}
+	ashurism_reformed = {
+		color = { 180 180 180 }
+		icon = 37
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country = {
+		}
+		country_as_secondary = {
+			global_regiment_recruit_speed = -0.10
+			defensiveness = 0.2
+		}
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+		
+		annex = yes
+	}
+	
+	harmonized_modifier = harmonized_mesopotamian
+
+	crusade_name = CRUSADE
+}
+tengri = {
+	tengri_pagan_unreformed = {
+		color = { 25 76 217 }
+		icon = 33
+		country = {
+			cav_to_inf_ratio = 0.25
+			global_regiment_cost = -0.2
+			movement_speed = 0.20
+		}
+		can_have_secondary_religion = yes
+		
+		harmonized_modifier = harmonized_tengri
+		
+		heretic = { OLD_TENGRI }
+	}
+	tengri_pagan_reformed = {
+		color = { 40 100 220 }
+		icon = 33
+		country = {
+			cav_to_inf_ratio = 0.25
+		}
+		can_have_secondary_religion = yes
+		
+		harmonized_modifier = harmonized_tengri
+		
+		heretic = { OLD_TENGRI }
+	}
+
+	
+	crusade_name = CRUSADE
+}
+muism = {
+	muism_reformed = {
+		color = { 150 150 50 }
+		icon = 48
+		province = {
+			local_missionary_strength = 0.01
+		}
+		country = {
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			loot_amount = 0.25
+		}
+		
+		harmonized_modifier = harmonized_muism
+		
+		heretic = { TAOIST }
+	}
+	muism = {
+		color = { 130 130 50 }
+		icon = 48
+		province = {
+			local_missionary_strength = 0.01
+		}
+		country = {
+			tolerance_heretic = 2
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			loot_amount = 0.25
+		}
+		
+		harmonized_modifier = harmonized_muism
+		
+		heretic = { TAOIST }
+	}
+	harmonized_modifier = harmonized_pagan
+	
+	crusade_name = CRUSADE
+}
+bon = {
+	tibetan_bon_reformed = {
+		color = { 0 130 130 }
+		icon = 47
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country = {
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			shock_damage_received = -0.1
+		}
+		
+		harmonized_modifier = harmonized_bon
+		
+		heretic = { ZEN }
+		
+		uses_karma = yes
+	}
+	tibetan_bon = {
+		color = { 0 100 100 }
+		icon = 47
+		province = {
+			local_missionary_strength = 0.01
+			local_defensiveness = 0.1
+		}
+		country = {
+			shock_damage_received = -0.1
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			shock_damage_received = -0.1
+		}
+		
+		harmonized_modifier = harmonized_bon
+		
+		heretic = { ZEN }
+		
+		uses_karma = yes
+	}
+	harmonized_modifier = harmonized_pagan
+	
+	crusade_name = CRUSADE
+}

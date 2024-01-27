@@ -1,0 +1,4680 @@
+namespace = roc_religion
+
+#############################
+# Religion spawning events
+#############################
+
+country_event = {
+	id = roc_religion.1
+	title = roc_religion.1.t
+	desc = roc_religion.1.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = ashurism
+			}
+			any_province = {
+				religion = ashurism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = ashurism
+		}
+	}
+	option = {
+		name = roc_religion.1.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = ashurism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.2
+	title = roc_religion.2.t
+	desc = roc_religion.2.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = shamanism
+			}
+			any_province = {
+				religion = shamanism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = shamanism
+		}
+	}
+	option = {
+		name = roc_religion.2.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = shamanism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.3
+	title = roc_religion.3.t
+	desc = roc_religion.3.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = egyptian
+			}
+			any_province = {
+				religion = egyptian
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = egyptian
+		}
+	}
+	option = {
+		name = roc_religion.3.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = egyptian
+		}
+	}
+}
+country_event = {
+	id = roc_religion.4
+	title = roc_religion.4.t
+	desc = roc_religion.4.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = norse_pagan_unreformed
+			}
+			any_province = {
+				religion = norse_pagan_unreformed
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = norse_pagan_unreformed
+		}
+	}
+	option = {
+		name = roc_religion.4.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = norse_pagan_unreformed
+		}
+	}
+}
+country_event = {
+	id = roc_religion.5
+	title = roc_religion.5.t
+	desc = roc_religion.5.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = slavic
+			}
+			any_province = {
+				religion = slavic
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = slavic
+		}
+	}
+	option = {
+		name = roc_religion.5.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = slavic
+		}
+	}
+}
+country_event = {
+	id = roc_religion.6
+	title = roc_religion.6.t
+	desc = roc_religion.6.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = suomenusko
+			}
+			any_province = {
+				religion = suomenusko
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = suomenusko
+		}
+	}
+	option = {
+		name = roc_religion.6.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = suomenusko
+		}
+	}
+}
+country_event = {
+	id = roc_religion.7
+	title = roc_religion.7.t
+	desc = roc_religion.7.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = romuva
+			}
+			any_province = {
+				religion = romuva
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = romuva
+		}
+	}
+	option = {
+		name = roc_religion.7.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = romuva
+		}
+	}
+}
+country_event = {
+	id = roc_religion.8
+	title = roc_religion.8.t
+	desc = roc_religion.8.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = inti
+			}
+			any_province = {
+				religion = inti
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = inti
+		}
+	}
+	option = {
+		name = roc_religion.8.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = inti
+		}
+	}
+}
+country_event = {
+	id = roc_religion.9
+	title = roc_religion.9.t
+	desc = roc_religion.9.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = nahuatl
+			}
+			any_province = {
+				religion = nahuatl
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = nahuatl
+		}
+	}
+	option = {
+		name = roc_religion.9.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = nahuatl
+		}
+	}
+}
+country_event = {
+	id = roc_religion.10
+	title = roc_religion.10.t
+	desc = roc_religion.10.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = mesoamerican_religion
+			}
+			any_province = {
+				religion = mesoamerican_religion
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = mesoamerican_religion
+		}
+	}
+	option = {
+		name = roc_religion.10.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = mesoamerican_religion
+		}
+	}
+}
+country_event = {
+	id = roc_religion.11
+	title = roc_religion.11.t
+	desc = roc_religion.11.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = totemism
+			}
+			any_province = {
+				religion = totemism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = totemism
+		}
+	}
+	option = {
+		name = roc_religion.11.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = totemism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.12
+	title = roc_religion.12.t
+	desc = roc_religion.12.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			NOT = { is_year = 500 }
+			religion = hellenism
+			religion = shamanism
+			religion = ashurism
+			religion = druidism
+			religion = romuva
+			religion = slavic
+			religion = norse_pagan_unreformed
+			religion = egyptian
+			religion = inti
+			religion = nahuatl
+			religion = suomenusko
+			religion = mesoamerican_religion
+			religion = totemism
+			religion = dreamtime
+			religion = tengri_pagan_unreformed
+			religion = muism
+			religion = tibetan_bon
+			religion = shinto
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = jewish
+			}
+			any_province = {
+				religion = jewish
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.12.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = jewish
+	}
+	option = {
+		name = roc_religion.12.b
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = jewish
+		}
+	}
+}
+country_event = {
+	id = roc_religion.13
+	title = roc_religion.13.t
+	desc = roc_religion.13.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			NOT = { is_year = 500 }
+			religion = hellenism
+			religion = shamanism
+			religion = ashurism
+			religion = druidism
+			religion = romuva
+			religion = slavic
+			religion = norse_pagan_unreformed
+			religion = egyptian
+			religion = inti
+			religion = nahuatl
+			religion = suomenusko
+			religion = mesoamerican_religion
+			religion = totemism
+			religion = dreamtime
+			religion = tengri_pagan_unreformed
+			religion = muism
+			religion = tibetan_bon
+			religion = shinto
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = zoroastrian
+			}
+			any_province = {
+				religion = zoroastrian
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.12.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = zoroastrian
+	}
+	option = {
+		name = roc_religion.13.b
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = zoroastrian
+		}
+	}
+}
+country_event = {
+	id = roc_religion.14
+	title = roc_religion.14.t
+	desc = roc_religion.14.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = druidism
+			}
+			any_province = {
+				religion = druidism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = druidism
+		}
+	}
+	option = {
+		name = roc_religion.14.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = druidism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.15
+	title = roc_religion.15.t
+	desc = roc_religion.15.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = hellenism
+			}
+			any_province = {
+				religion = hellenism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = hellenism
+		}
+	}
+	option = {
+		name = roc_religion.15.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = hellenism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.16
+	title = roc_religion.16.t
+	desc = roc_religion.16.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = tengri_pagan_unreformed
+			}
+			any_province = {
+				religion = tengri_pagan_unreformed
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = tengri_pagan_unreformed
+		}
+	}
+	option = {
+		name = roc_religion.16.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = tengri_pagan_reformed
+		}
+	}
+}
+country_event = {
+	id = roc_religion.17
+	title = roc_religion.17.t
+	desc = roc_religion.17.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = muism
+			}
+			any_province = {
+				religion = muism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = muism
+		}
+	}
+	option = {
+		name = roc_religion.17.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = muism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.18
+	title = roc_religion.18.t
+	desc = roc_religion.18.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = tibetan_bon
+			}
+			any_province = {
+				religion = tibetan_bon
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = tibetan_bon
+		}
+	}
+	option = {
+		name = roc_religion.18.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = tibetan_bon
+		}
+	}
+}
+country_event = {
+	id = roc_religion.19
+	title = roc_religion.19.t
+	desc = roc_religion.19.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = dreamtime
+			}
+			any_province = {
+				religion = dreamtime
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = dreamtime
+		}
+	}
+	option = {
+		name = roc_religion.19.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = dreamtime
+		}
+	}
+}
+country_event = {
+	id = roc_religion.20
+	title = roc_religion.20.t
+	desc = roc_religion.20.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = shinto
+			}
+			any_province = {
+				religion = shinto
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = shinto
+		}
+	}
+	option = {
+		name = roc_religion.20.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = shinto
+		}
+	}
+}
+country_event = {
+	id = roc_religion.21
+	title = roc_religion.21.t
+	desc = roc_religion.21.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = confucianism
+			}
+			any_province = {
+				religion = confucianism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = confucianism
+		}
+	}
+	option = {
+		name = roc_religion.21.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = jainism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.22
+	title = roc_religion.22.t
+	desc = roc_religion.22.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = jainism
+			}
+			any_province = {
+				religion = jainism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = jainism
+		}
+	}
+	option = {
+		name = roc_religion.22.a		
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.23
+	title = roc_religion.23.t
+	desc = roc_religion.23.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = sikhism
+			}
+			any_province = {
+				religion = sikhism
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = sikhism
+		}
+	}
+	option = {
+		name = roc_religion.23.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = sikhism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.24
+	title = roc_religion.24.t
+	desc = roc_religion.24.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { is_year = 500 }
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = hinduism
+			}
+			any_province = {
+				religion = hinduism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = new_religion
+			change_religion = hinduism
+		}
+	}
+	option = {
+		name = roc_religion.24.a		
+		ai_chance = {			
+			factor = 1
+		}
+		random_owned_province = {
+			change_religion = hinduism
+		}
+	}
+}
+country_event = {
+	id = roc_religion.25
+	title = roc_religion.25.t
+	desc = roc_religion.25.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			NOT = { is_year = 500 }
+			religion = hellenism
+			religion = shamanism
+			religion = ashurism
+			religion = druidism
+			religion = romuva
+			religion = slavic
+			religion = norse_pagan_unreformed
+			religion = egyptian
+			religion = inti
+			religion = nahuatl
+			religion = suomenusko
+			religion = mesoamerican_religion
+			religion = totemism
+			religion = dreamtime
+			religion = tengri_pagan_unreformed
+			religion = muism
+			religion = tibetan_bon
+			religion = shinto
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = buddhism
+			}
+			any_province = {
+				religion = buddhism
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.25.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = buddhism
+		random_owned_province = {
+			change_religion = buddhism
+		}
+	}
+	option = {
+		name = roc_religion.25.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.26
+	title = roc_religion.26.t
+	desc = roc_religion.26.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			NOT = { is_year = 500 }
+			religion = hellenism
+			religion = shamanism
+			religion = ashurism
+			religion = druidism
+			religion = romuva
+			religion = slavic
+			religion = norse_pagan_unreformed
+			religion = egyptian
+			religion = inti
+			religion = nahuatl
+			religion = suomenusko
+			religion = mesoamerican_religion
+			religion = totemism
+			religion = dreamtime
+			religion = tengri_pagan_unreformed
+			religion = muism
+			religion = tibetan_bon
+			religion = shinto
+			religion = jewish
+			religion = early_christian
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = islam
+			}
+			any_province = {
+				religion = islam
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.26.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = islam
+		random_owned_province = {
+			change_religion = islam
+		}
+	}
+	option = {
+		name = roc_religion.26.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.27
+	title = roc_religion.27.t
+	desc = roc_religion.27.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			NOT = { is_year = 500 }
+			religion = hellenism
+			religion = shamanism
+			religion = ashurism
+			religion = druidism
+			religion = romuva
+			religion = slavic
+			religion = norse_pagan_unreformed
+			religion = egyptian
+			religion = inti
+			religion = nahuatl
+			religion = suomenusko
+			religion = mesoamerican_religion
+			religion = totemism
+			religion = dreamtime
+			religion = tengri_pagan_unreformed
+			religion = muism
+			religion = tibetan_bon
+			religion = shinto
+			religion = jewish
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = early_christian
+			}
+			any_province = {
+				religion = early_christian
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.27.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = early_christian
+		random_owned_province = {
+			change_religion = early_christian
+		}
+	}
+	option = {
+		name = roc_religion.27.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.28
+	title = roc_religion.28.t
+	desc = roc_religion.28.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = early_christian
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = catholic
+			}
+			any_province = {
+				religion = catholic
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.28.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = catholic
+		random_owned_province = {
+			change_religion = catholic
+		}
+	}
+	option = {
+		name = roc_religion.28.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.29
+	title = roc_religion.29.t
+	desc = roc_religion.29.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = early_christian
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = orthodox
+			}
+			any_province = {
+				religion = orthodox
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.29.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = orthodox
+		random_owned_province = {
+			change_religion = orthodox
+		}
+	}
+	option = {
+		name = roc_religion.29.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.30
+	title = roc_religion.30.t
+	desc = roc_religion.30.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = early_christian
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = coptic
+			}
+			any_province = {
+				religion = coptic
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.30.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = coptic
+		random_owned_province = {
+			change_religion = coptic
+		}
+	}
+	option = {
+		name = roc_religion.30.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.31
+	title = roc_religion.31.t
+	desc = roc_religion.31.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = catholic
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = cathar
+			}
+			any_province = {
+				religion = cathar
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.31.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = cathar
+		random_owned_province = {
+			change_religion = cathar
+		}
+	}
+	option = {
+		name = roc_religion.31.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.32
+	title = roc_religion.32.t
+	desc = roc_religion.32.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = catholic
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = hussite
+			}
+			any_province = {
+				religion = hussite
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.31.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = hussite
+		random_owned_province = {
+			change_religion = hussite
+		}
+	}
+	option = {
+		name = roc_religion.32.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.33
+	title = roc_religion.33.t
+	desc = roc_religion.33.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = islam
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = sunni
+			}
+			any_province = {
+				religion = sunni
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.33.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = sunni
+		random_owned_province = {
+			change_religion = sunni
+		}
+	}
+	option = {
+		name = roc_religion.33.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.34
+	title = roc_religion.34.t
+	desc = roc_religion.34.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = islam
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = shiite
+			}
+			any_province = {
+				religion = shiite
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.34.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = shiite
+		random_owned_province = {
+			change_religion = shiite
+		}
+	}
+	option = {
+		name = roc_religion.34.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.35
+	title = roc_religion.35.t
+	desc = roc_religion.35.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = islam
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = ibadi
+			}
+			any_province = {
+				religion = ibadi
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.35.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = ibadi
+		random_owned_province = {
+			change_religion = ibadi
+		}
+	}
+	option = {
+		name = roc_religion.35.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.36
+	title = roc_religion.36.t
+	desc = roc_religion.36.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = buddhism
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = vajrayana
+			}
+			any_province = {
+				religion = vajrayana
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.36.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = vajrayana
+		random_owned_province = {
+			change_religion = vajrayana
+		}
+	}
+	option = {
+		name = roc_religion.36.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = roc_religion.37
+	title = roc_religion.37.t
+	desc = roc_religion.37.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = buddhism
+		}
+		NOT = {
+			has_country_flag = new_religion
+		}
+		NOT = {
+			any_country = {
+				religion = mahayana
+			}
+			any_province = {
+				religion = mahayana
+			}
+		}
+		is_year = 500
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+	}
+	
+	option = {
+		name = roc_religion.37.a		
+		ai_chance = {			
+			factor = 1
+		}
+		set_country_flag = new_religion
+		change_religion = mahayana
+		random_owned_province = {
+			change_religion = mahayana
+		}
+	}
+	option = {
+		name = roc_religion.37.b
+		ai_chance = {			
+			factor = 1
+		}
+	}
+}
+province_event = {
+	id = roc_religion.38
+	title = roc_religion.38.t
+	desc = roc_religion.38.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		religion = animism
+		any_neighbor_province = {
+			NOT = {
+				religion = animism
+			}
+		}
+		is_city = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 50
+	}
+	
+	option = {
+		name = roc_religion.38.a
+		
+		if = {
+			limit = {
+				any_neighbor_province = {
+					religion = hellenism
+				}
+			}
+			change_religion = hellenism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = hellenism_reformed
+				}
+			}
+			change_religion = hellenism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = druidism
+				}
+			}
+			change_religion = druidism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = druidism_reformed
+				}
+			}
+			change_religion = druidism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = zoroastrian
+				}
+			}
+			change_religion = zoroastrian
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = jewish
+				}
+			}
+			change_religion = jewish
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = totemism
+				}
+			}
+			change_religion = totemism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = mesoamerican_religion
+				}
+			}
+			change_religion = mesoamerican_religion
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = nahuatl
+				}
+			}
+			change_religion = nahuatl
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = inti
+				}
+			}
+			change_religion = inti
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = romuva
+				}
+			}
+			change_religion = romuva
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = romuva_reformed
+				}
+			}
+			change_religion = romuva_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = suomenusko
+				}
+			}
+			change_religion = suomenusko
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = suomenusko_reformed
+				}
+			}
+			change_religion = suomenusko_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = slavic
+				}
+			}
+			change_religion = slavic
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = slavic_reformed
+				}
+			}
+			change_religion = slavic_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = norse_pagan_unreformed
+				}
+			}
+			change_religion = norse_pagan_unreformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = norse_pagan_reformed
+				}
+			}
+			change_religion = norse_pagan_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = egyptian
+				}
+			}
+			change_religion = egyptian
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = egyptian_reformed
+				}
+			}
+			change_religion = egyptian_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shamanism
+				}
+			}
+			change_religion = shamanism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shamanism_reformed
+				}
+			}
+			change_religion = shamanism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = ashurism
+				}
+			}
+			change_religion = ashurism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = ashurism_reformed
+				}
+			}
+			change_religion = ashurism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = tengri_pagan_unreformed
+				}
+			}
+			change_religion = tengri_pagan_unreformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = tengri_pagan_reformed
+				}
+			}
+			change_religion = tengri_pagan_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = muism
+				}
+			}
+			change_religion = muism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = muism_reformed
+				}
+			}
+			change_religion = muism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = tibetan_bon
+				}
+			}
+			change_religion = tibetan_bon
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = tibetan_bon_reformed
+				}
+			}
+			change_religion = tibetan_bon_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = dreamtime
+				}
+			}
+			change_religion = dreamtime
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = dreamtime_reformed
+				}
+			}
+			change_religion = dreamtime_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shinto
+				}
+			}
+			change_religion = shinto
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shinto_reformed
+				}
+			}
+			change_religion = shinto_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = confucianism
+				}
+			}
+			change_religion = confucianism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = jainism
+				}
+			}
+			change_religion = jainism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = sikhism
+				}
+			}
+			change_religion = sikhism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = hinduism
+				}
+			}
+			change_religion = hinduism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = mahayana
+				}
+			}
+			change_religion = mahayana
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = vajrayana
+				}
+			}
+			change_religion = vajrayana
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = buddhism
+				}
+			}
+			change_religion = buddhism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = islam
+				}
+			}
+			change_religion = islam
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = sunni
+				}
+			}
+			change_religion = sunni
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = ibadi
+				}
+			}
+			change_religion = ibadi
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shiite
+				}
+			}
+			change_religion = shiite
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = early_christian
+				}
+			}
+			change_religion = early_christian
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = coptic
+				}
+			}
+			change_religion = coptic
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = orthodox
+				}
+			}
+			change_religion = orthodox
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = reformed
+				}
+			}
+			change_religion = reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = protestant
+				}
+			}
+			change_religion = protestant
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = hussite
+				}
+			}
+			change_religion = hussite
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = cathar
+				}
+			}
+			change_religion = cathar
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = anglican
+				}
+			}
+			change_religion = anglican
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = catholic
+				}
+			}
+			change_religion = catholic
+		}
+	}
+}
+province_event = {
+	id = roc_religion.39
+	title = roc_religion.39.t
+	desc = roc_religion.39.d
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	trigger = {
+		OR = {
+			religion = hellenism
+			religion = shamanism
+			religion = ashurism
+			religion = druidism
+			religion = romuva
+			religion = slavic
+			religion = norse_pagan_unreformed
+			religion = egyptian
+			religion = inti
+			religion = nahuatl
+			religion = suomenusko
+			religion = mesoamerican_religion
+			religion = totemism
+			religion = dreamtime
+			religion = tengri_pagan_unreformed
+			religion = muism
+			religion = tibetan_bon
+			religion = shinto
+		}
+		is_city = yes
+		any_neighbor_province = {
+			OR = {
+				religion = early_christian
+				religion = cathar
+				religion = catholic
+				religion = orthodox
+				religion = buddhism
+				religion = coptic
+				religion = anglican
+				religion = protestant
+				religion = reformed
+				religion = hussite
+				religion = islam
+				religion = sunni
+				religion = ibadi
+				religion = shiite
+				religion = vajrayana
+				religion = mahayana
+				religion = jainism
+				religion = sikhism
+				religion = zoroastrian
+				religion = hellenism_reformed
+				religion = shamanism_reformed
+				religion = ashurism_reformed
+				religion = druidism_reformed
+				religion = romuva_reformed
+				religion = slavic_reformed
+				religion = norse_pagan_reformed
+				religion = egyptian_reformed
+				religion = suomenusko_reformed
+				religion = dreamtime_reformed
+				religion = tengri_pagan_reformed
+				religion = muism_reformed
+				religion = tibetan_bon_reformed
+				religion = shinto_reformed
+			}
+		}	
+	}
+	
+	mean_time_to_happen = {
+		months = 1000
+	}
+	
+	option = {
+		name = roc_religion.39.a
+		
+		if = {
+			limit = {
+				any_neighbor_province = {
+					religion = early_christian
+				}
+			}
+			change_religion = early_christian
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = cathar
+				}
+			}
+			change_religion = cathar
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = catholic
+				}
+			}
+			change_religion = catholic
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = orthodox
+				}
+			}
+			change_religion = orthodox
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = buddhism
+				}
+			}
+			change_religion = buddhism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = coptic
+				}
+			}
+			change_religion = coptic
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = anglican
+				}
+			}
+			change_religion = anglican
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = protestant
+				}
+			}
+			change_religion = protestant
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = reformed
+				}
+			}
+			change_religion = reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = hussite
+				}
+			}
+			change_religion = hussite
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = islam
+				}
+			}
+			change_religion = islam
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = sunni
+				}
+			}
+			change_religion = sunni
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = ibadi
+				}
+			}
+			change_religion = ibadi
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shiite
+				}
+			}
+			change_religion = shiite
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = vajrayana
+				}
+			}
+			change_religion = vajrayana
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = mahayana
+				}
+			}
+			change_religion = mahayana
+			}
+		else_if = {
+			limit = {
+				any_neighbor_province = {	
+					religion = jainism
+				}
+			}
+			change_religion = jainism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = sikhism
+				}
+			}
+			change_religion = sikhism
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = zoroastrian
+				}
+			}
+			change_religion = zoroastrian
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = hellenism_reformed
+				}
+			}
+			change_religion = hellenism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shamanism_reformed
+				}
+			}
+			change_religion = shamanism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = ashurism_reformed
+				}
+			}
+				change_religion = ashurism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = druidism_reformed
+				}
+			}
+			change_religion = druidism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = romuva_reformed
+				}
+			}
+			change_religion = romuva_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = slavic_reformed
+				}
+			}
+			change_religion = slavic_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = norse_pagan_reformed
+				}
+			}
+			change_religion = norse_pagan_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = egyptian_reformed
+				}
+			}
+			change_religion = egyptian_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = suomenusko_reformed
+				}
+			}
+			change_religion = suomenusko_reformed
+			}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = dreamtime_reformed
+				}
+			}
+			change_religion = dreamtime_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = tengri_pagan_reformed
+				}
+			}
+			change_religion = tengri_pagan_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = muism_reformed
+				}
+			}
+			change_religion = muism_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = tibetan_bon_reformed
+				}
+			}
+			change_religion = tibetan_bon_reformed
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					religion = shinto_reformed
+				}
+			}
+			change_religion = shinto_reformed
+		}
+	}
+}
+country_event = {
+	id = roc_religion.40
+	title = roc_religion.40.t
+	desc = roc_religion.40.desc
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = roc_religion.40.a
+		
+		if = {
+			limit = {
+				religion = hellenism
+			}
+			change_religion = hellenism_reformed
+			random_core_province = {
+				change_religion = hellenism_reformed
+			}
+			set_global_flag = religious_head_autonomous_hellenism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism
+			}
+			change_religion = shamanism_reformed
+			random_core_province = {
+				change_religion = shamanism_reformed
+			}
+			set_global_flag = religious_head_autonomous_shamanism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism
+			}
+			change_religion = ashurism_reformed
+			random_core_province = {
+				change_religion = ashurism_reformed
+			}
+			set_global_flag = religious_head_autonomous_ashurism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism
+			}
+			change_religion = druidism_reformed
+			random_core_province = {
+				change_religion = druidism_reformed
+			}
+			set_global_flag = religious_head_autonomous_druidism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva
+			}
+			change_religion = romuva_reformed
+			random_core_province = {
+				change_religion = romuva_reformed
+			}
+			set_global_flag = religious_head_autonomous_romuva
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic
+			}
+			change_religion = slavic_reformed
+			random_core_province = {
+				change_religion = slavic_reformed
+			}
+			set_global_flag = religious_head_autonomous_slavic
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_unreformed
+			}
+			change_religion = norse_pagan_reformed
+			random_core_province = {
+				change_religion = norse_pagan_reformed
+			}
+			set_global_flag = religious_head_autonomous_norse
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian
+			}
+			change_religion = egyptian_reformed
+			random_core_province = {
+				change_religion = egyptian_reformed
+			}
+			set_global_flag = religious_head_autonomous_egyptian
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti
+			}
+			change_religion = inti_reformed
+			random_core_province = {
+				change_religion = inti_reformed
+			}
+			set_global_flag = religious_head_autonomous_inti
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl
+			}
+			change_religion = nahuatl_reformed
+			random_core_province = {
+				change_religion = nahuatl_reformed
+			}
+			set_global_flag = religious_head_autonomous_nahuatl
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko
+			}
+			change_religion = suomenusko_reformed
+			random_core_province = {
+				change_religion = suomenusko_reformed
+			}
+			set_global_flag = religious_head_autonomous_suomenusko
+			country_event = {
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion
+			}
+			change_religion = mesoamerican_religion_reformed
+			random_core_province = {
+				change_religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = religious_head_autonomous_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism
+			}
+			change_religion = totemism_reformed
+			random_core_province = {
+				change_religion = totemism_reformed
+			}
+			set_global_flag = religious_head_autonomous_totemism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime
+			}
+			change_religion = dreamtime_reformed
+			random_core_province = {
+				change_religion = dreamtime_reformed
+			}
+			set_global_flag = religious_head_autonomous_dreamtime
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_unreformed
+			}
+			change_religion = tengri_pagan_reformed
+			random_core_province = {
+				change_religion = tengri_pagan_reformed
+			}
+			set_global_flag = religious_head_autonomous_tengri
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism
+			}
+			change_religion = muism_reformed
+			random_core_province = {
+				change_religion = muism_reformed
+			}
+			set_global_flag = religious_head_autonomous_muism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon
+			}
+			change_religion = tibetan_bon_reformed
+			random_core_province = {
+				change_religion = tibetan_bon_reformed
+			}
+			set_global_flag = religious_head_autonomous_bon
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto
+			}
+			change_religion = shinto_reformed
+			random_core_province = {
+				change_religion = shinto_reformed
+			}
+			set_global_flag = religious_head_autonomous_shinto
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+	}
+	option = {
+		name = roc_religion.40.b
+		
+		if = {
+			limit = {
+				religion = hellenism
+			}
+			change_religion = hellenism_reformed
+			random_core_province = {
+				change_religion = hellenism_reformed
+			}
+			set_global_flag = religious_head_clergy_hellenism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism
+			}
+			change_religion = shamanism_reformed
+			random_core_province = {
+				change_religion = shamanism_reformed
+			}
+			set_global_flag = religious_head_clergy_shamanism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism
+			}
+			change_religion = ashurism_reformed
+			random_core_province = {
+				change_religion = ashurism_reformed
+			}
+			set_global_flag = religious_head_clergy_ashurism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism
+			}
+			change_religion = druidism_reformed
+			random_core_province = {
+				change_religion = druidism_reformed
+			}
+			set_global_flag = religious_head_clergy_druidism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva
+			}
+			change_religion = romuva_reformed
+			random_core_province = {
+				change_religion = romuva_reformed
+			}
+			set_global_flag = religious_head_clergy_romuva
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic
+			}
+			change_religion = slavic_reformed
+			random_core_province = {
+				change_religion = slavic_reformed
+			}
+			set_global_flag = religious_head_clergy_slavic
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_unreformed
+			}
+			change_religion = norse_pagan_reformed
+			random_core_province = {
+				change_religion = norse_pagan_reformed
+			}
+			set_global_flag = religious_head_clergy_norse
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian
+			}
+			change_religion = egyptian_reformed
+			random_core_province = {
+				change_religion = egyptian_reformed
+			}
+			set_global_flag = religious_head_clergy_egyptian
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti
+			}
+			change_religion = inti_reformed
+			random_core_province = {
+				change_religion = inti_reformed
+			}
+			set_global_flag = religious_head_clergy_inti
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl
+			}
+			change_religion = nahuatl_reformed
+			random_core_province = {
+				change_religion = nahuatl_reformed
+			}
+			set_global_flag = religious_head_clergy_nahuatl
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko
+			}
+			change_religion = suomenusko_reformed
+			random_core_province = {
+				change_religion = suomenusko_reformed
+			}
+			set_global_flag = religious_head_clergy_suomenusko
+			country_event = {
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion
+			}
+			change_religion = mesoamerican_religion_reformed
+			random_core_province = {
+				change_religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = religious_head_clergy_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism
+			}
+			change_religion = totemism_reformed
+			random_core_province = {
+				change_religion = totemism_reformed
+			}
+			set_global_flag = religious_head_clergy_totemism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime
+			}
+			change_religion = dreamtime_reformed
+			random_core_province = {
+				change_religion = dreamtime_reformed
+			}
+			set_global_flag = religious_head_clergy_dreamtime
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_unreformed
+			}
+			change_religion = tengri_pagan_reformed
+			random_core_province = {
+				change_religion = tengri_pagan_reformed
+			}
+			set_global_flag = religious_head_clergy_tengri
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism
+			}
+			change_religion = muism_reformed
+			random_core_province = {
+				change_religion = muism_reformed
+			}
+			set_global_flag = religious_head_clergy_muism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon
+			}
+			change_religion = tibetan_bon_reformed
+			random_core_province = {
+				change_religion = tibetan_bon_reformed
+			}
+			set_global_flag = religious_head_clergy_bon
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto
+			}
+			change_religion = shinto_reformed
+			random_core_province = {
+				change_religion = shinto_reformed
+			}
+			set_global_flag = religious_head_clergy_shinto
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+	}
+	option = {
+		name = roc_religion.40.c
+		
+		if = {
+			limit = {
+				religion = hellenism
+			}
+			change_religion = hellenism_reformed
+			random_core_province = {
+				change_religion = hellenism_reformed
+			}
+			set_global_flag = religious_head_papal_hellenism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism
+			}
+			change_religion = shamanism_reformed
+			random_core_province = {
+				change_religion = shamanism_reformed
+			}
+			set_global_flag = religious_head_papal_shamanism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism
+			}
+			change_religion = ashurism_reformed
+			random_core_province = {
+				change_religion = ashurism_reformed
+			}
+			set_global_flag = religious_head_papal_ashurism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism
+			}
+			change_religion = druidism_reformed
+			random_core_province = {
+				change_religion = druidism_reformed
+			}
+			set_global_flag = religious_head_papal_druidism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva
+			}
+			change_religion = romuva_reformed
+			random_core_province = {
+				change_religion = romuva_reformed
+			}
+			set_global_flag = religious_head_papal_romuva
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic
+			}
+			change_religion = slavic_reformed
+			random_core_province = {
+				change_religion = slavic_reformed
+			}
+			set_global_flag = religious_head_papal_slavic
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_unreformed
+			}
+			change_religion = norse_pagan_reformed
+			random_core_province = {
+				change_religion = norse_pagan_reformed
+			}
+			set_global_flag = religious_head_papal_norse
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian
+			}
+			change_religion = egyptian_reformed
+			random_core_province = {
+				change_religion = egyptian_reformed
+			}
+			set_global_flag = religious_head_papal_egyptian
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti
+			}
+			change_religion = inti_reformed
+			random_core_province = {
+				change_religion = inti_reformed
+			}
+			set_global_flag = religious_head_papal_inti
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl
+			}
+			change_religion = nahuatl_reformed
+			random_core_province = {
+				change_religion = nahuatl_reformed
+			}
+			set_global_flag = religious_head_papal_nahuatl
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko
+			}
+			change_religion = suomenusko_reformed
+			random_core_province = {
+				change_religion = suomenusko_reformed
+			}
+			set_global_flag = religious_head_papal_suomenusko
+			country_event = {
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion
+			}
+			change_religion = mesoamerican_religion_reformed
+			random_core_province = {
+				change_religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = religious_head_papal_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism
+			}
+			change_religion = totemism_reformed
+			random_core_province = {
+				change_religion = totemism_reformed
+			}
+			set_global_flag = religious_head_papal_totemism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime
+			}
+			change_religion = dreamtime_reformed
+			random_core_province = {
+				change_religion = dreamtime_reformed
+			}
+			set_global_flag = religious_head_papal_dreamtime
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_unreformed
+			}
+			change_religion = tengri_pagan_reformed
+			random_core_province = {
+				change_religion = tengri_pagan_reformed
+			}
+			set_global_flag = religious_head_papal_tengri
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism
+			}
+			change_religion = muism_reformed
+			random_core_province = {
+				change_religion = muism_reformed
+			}
+			set_global_flag = religious_head_papal_muism
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon
+			}
+			change_religion = tibetan_bon_reformed
+			random_core_province = {
+				change_religion = tibetan_bon_reformed
+			}
+			set_global_flag = religious_head_papal_bon
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto
+			}
+			change_religion = shinto_reformed
+			random_core_province = {
+				change_religion = shinto_reformed
+			}
+			set_global_flag = religious_head_papal_shinto
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+	}
+	option = {
+		name = roc_religion.40.d
+
+		if = {
+			limit = {
+				religion = hellenism
+			}
+			change_religion = hellenism_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_hellenism
+				change_religion = hellenism_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism
+			}
+			change_religion = shamanism_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_shamanism
+				change_religion = shamanism_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism
+			}
+			change_religion = ashurism_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_ashurism
+				change_religion = ashurism_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism
+			}
+			change_religion = druidism_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_druidism
+				change_religion = druidism_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva
+			}
+			change_religion = romuva_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_romuva
+				change_religion = romuva_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic
+			}
+			change_religion = slavic_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_slavic
+				change_religion = slavic_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_unreformed
+			}
+			change_religion = norse_pagan_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_norse
+				change_religion = norse_pagan_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian
+			}
+			change_religion = egyptian_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_egyptian
+				change_religion = egyptian_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti
+			}
+			change_religion = inti_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_inti
+				change_religion = inti_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl
+			}
+			change_religion = nahuatl_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_nahuatl
+				change_religion = nahuatl_reformed
+			}
+			country_event = {
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko
+			}
+			change_religion = suomenusko_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_suomenusko
+				change_religion = suomenusko_reformed
+			}
+			country_event = {
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion
+			}
+			change_religion = mesoamerican_religion_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_mayan
+				change_religion = mesoamerican_religion_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism
+			}
+			change_religion = totemism_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_totemism
+				change_religion = totemism_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime
+			}
+			change_religion = dreamtime_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_dreamtime
+				change_religion = dreamtime_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_unreformed
+			}
+			change_religion = tengri_pagan_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_tengri
+				change_religion = tengri_pagan_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism
+			}
+			change_religion = muism_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_muism
+				change_religion = muism_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon
+			}
+			change_religion = tibetan_bon_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_bon
+				change_religion = tibetan_bon_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto
+			}
+			change_religion = shinto_reformed
+			random_core_province = {
+				limit = {
+					is_capital_of = ROOT
+				}
+				add_province_triggered_modifier = seat_of_religious_head_shinto
+				change_religion = shinto_reformed
+			}
+			country_event = { 
+				id = roc_religion.41
+			}
+		}
+	}
+}
+country_event = {
+	id = roc_religion.41
+	title = roc_religion.41.t
+	desc = roc_religion.41.desc
+	picture = FORT_eventPicture
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = roc_religion.41.b
+		trigger = {
+			NOT = {
+				has_global_flag = war_god_hellenism
+				has_global_flag = war_god_shamanism
+				has_global_flag = war_god_ashurism
+				has_global_flag = war_god_druidism
+				has_global_flag = war_god_romuva
+				has_global_flag = war_god_slavic
+				has_global_flag = war_god_norse
+				has_global_flag = war_god_egyptian
+				has_global_flag = war_god_inti
+				has_global_flag = war_god_nahuatl
+				has_global_flag = war_god_suomenusko
+				has_global_flag = war_god_mesoamerican_religion
+				has_global_flag = war_god_totemism
+				has_global_flag = war_god_dreamtime
+				has_global_flag = war_god_tengri
+				has_global_flag = war_god_muism
+				has_global_flag = war_god_bon
+				has_global_flag = war_god_shinto
+			}
+		}
+		if = {
+			limit = {
+				religion = hellenism_reformed
+			}
+			set_global_flag = war_god_hellenism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism_reformed
+			}
+			set_global_flag = war_god_shamanism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism_reformed
+			}
+			set_global_flag = war_god_ashurism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism_reformed
+			}
+			set_global_flag = war_god_druidism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva_reformed
+			}
+			set_global_flag = war_god_romuva
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic_reformed
+			}
+			set_global_flag = war_god_slavic
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_reformed
+			}
+			set_global_flag = war_god_norse
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian_reformed
+			}
+			set_global_flag = war_god_egyptian
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti_reformed
+			}
+			set_global_flag = war_god_inti
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl_reformed
+			}
+			set_global_flag = war_god_nahuatl
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko_reformed
+			}
+			set_global_flag = war_god_suomenusko
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = war_god_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism_reformed
+			}
+			set_global_flag = war_god_totemism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime_reformed
+			}
+			set_global_flag = war_god_dreamtime
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_reformed
+			}
+			set_global_flag = war_god_tengri
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism_reformed
+			}
+			set_global_flag = war_god_muism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon_reformed
+			}
+			set_global_flag = war_god_bon
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto_reformed
+			}
+			set_global_flag = war_god_shinto
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+	}
+	option = {
+		name = roc_religion.41.a
+		trigger = {
+			NOT = {
+				has_global_flag = strategy_goddess_hellenism
+				has_global_flag = strategy_goddess_shamanism
+				has_global_flag = strategy_goddess_ashurism
+				has_global_flag = strategy_goddess_druidism
+				has_global_flag = strategy_goddess_romuva
+				has_global_flag = strategy_goddess_slavic
+				has_global_flag = strategy_goddess_norse
+				has_global_flag = strategy_goddess_egyptian
+				has_global_flag = strategy_goddess_inti
+				has_global_flag = strategy_goddess_nahuatl
+				has_global_flag = strategy_goddess_suomenusko
+				has_global_flag = strategy_goddess_mesoamerican_religion
+				has_global_flag = strategy_goddess_totemism
+				has_global_flag = strategy_goddess_dreamtime
+				has_global_flag = strategy_goddess_tengri
+				has_global_flag = strategy_goddess_muism
+				has_global_flag = strategy_goddess_bon
+				has_global_flag = strategy_goddess_shinto
+			}
+		}
+		if = {
+			limit = {
+				religion = hellenism_reformed
+			}
+			set_global_flag = strategy_goddess_hellenism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism_reformed
+			}
+			set_global_flag = strategy_goddess_shamanism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism_reformed
+			}
+			set_global_flag = strategy_goddess_ashurism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism_reformed
+			}
+			set_global_flag = strategy_goddess_druidism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva_reformed
+			}
+			set_global_flag = strategy_goddess_romuva
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic_reformed
+			}
+			set_global_flag = strategy_goddess_slavic
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_reformed
+			}
+			set_global_flag = strategy_goddess_norse
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian_reformed
+			}
+			set_global_flag = strategy_goddess_egyptian
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti_reformed
+			}
+			set_global_flag = strategy_goddess_inti
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl_reformed
+			}
+			set_global_flag = strategy_goddess_nahuatl
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko_reformed
+			}
+			set_global_flag = strategy_goddess_suomenusko
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = strategy_goddess_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism_reformed
+			}
+			set_global_flag = strategy_goddess_totemism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime_reformed
+			}
+			set_global_flag = strategy_goddess_dreamtime
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_reformed
+			}
+			set_global_flag = strategy_goddess_tengri
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism_reformed
+			}
+			set_global_flag = strategy_goddess_muism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon_reformed
+			}
+			set_global_flag = strategy_goddess_bon
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto_reformed
+			}
+			set_global_flag = strategy_goddess_shinto
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+	}
+	option = {
+		name = roc_religion.41.c
+		trigger = {
+			NOT = {
+				has_global_flag = order_god_hellenism
+				has_global_flag = order_god_shamanism
+				has_global_flag = order_god_ashurism
+				has_global_flag = order_god_druidism
+				has_global_flag = order_god_romuva
+				has_global_flag = order_god_slavic
+				has_global_flag = order_god_norse
+				has_global_flag = order_god_egyptian
+				has_global_flag = order_god_inti
+				has_global_flag = order_god_nahuatl
+				has_global_flag = order_god_suomenusko
+				has_global_flag = order_god_mesoamerican_religion
+				has_global_flag = order_god_totemism
+				has_global_flag = order_god_dreamtime
+				has_global_flag = order_god_tengri
+				has_global_flag = order_god_muism
+				has_global_flag = order_god_bon
+				has_global_flag = order_god_shinto
+			}
+		}
+		if = {
+			limit = {
+				religion = hellenism_reformed
+			}
+			set_global_flag = order_god_hellenism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism_reformed
+			}
+			set_global_flag = order_god_shamanism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism_reformed
+			}
+			set_global_flag = order_god_ashurism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism_reformed
+			}
+			set_global_flag = order_god_druidism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva_reformed
+			}
+			set_global_flag = order_god_romuva
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic_reformed
+			}
+			set_global_flag = order_god_slavic
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_reformed
+			}
+			set_global_flag = order_god_norse
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian_reformed
+			}
+			set_global_flag = order_god_egyptian
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti_reformed
+			}
+			set_global_flag = order_god_inti
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl_reformed
+			}
+			set_global_flag = order_god_nahuatl
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko_reformed
+			}
+			set_global_flag = order_god_suomenusko
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = order_god_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism_reformed
+			}
+			set_global_flag = order_god_totemism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime_reformed
+			}
+			set_global_flag = order_god_dreamtime
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_reformed
+			}
+			set_global_flag = order_god_tengri
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism_reformed
+			}
+			set_global_flag = order_god_muism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon_reformed
+			}
+			set_global_flag = order_god_bon
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto_reformed
+			}
+			set_global_flag = order_god_shinto
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+	}
+	option = {
+		name = roc_religion.41.d
+		trigger = {
+			NOT = {
+				has_global_flag = sky_god_hellenism
+				has_global_flag = sky_god_shamanism
+				has_global_flag = sky_god_ashurism
+				has_global_flag = sky_god_druidism
+				has_global_flag = sky_god_romuva
+				has_global_flag = sky_god_slavic
+				has_global_flag = sky_god_norse
+				has_global_flag = sky_god_egyptian
+				has_global_flag = sky_god_inti
+				has_global_flag = sky_god_nahuatl
+				has_global_flag = sky_god_suomenusko
+				has_global_flag = sky_god_mesoamerican_religion
+				has_global_flag = sky_god_totemism
+				has_global_flag = sky_god_dreamtime
+				has_global_flag = sky_god_tengri
+				has_global_flag = sky_god_muism
+				has_global_flag = sky_god_bon
+				has_global_flag = sky_god_shinto
+			}
+		}
+		if = {
+			limit = {
+				religion = hellenism_reformed
+			}
+			set_global_flag = sky_god_hellenism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism_reformed
+			}
+			set_global_flag = sky_god_shamanism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism_reformed
+			}
+			set_global_flag = sky_god_ashurism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism_reformed
+			}
+			set_global_flag = sky_god_druidism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva_reformed
+			}
+			set_global_flag = sky_god_romuva
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic_reformed
+			}
+			set_global_flag = sky_god_slavic
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_reformed
+			}
+			set_global_flag = sky_god_norse
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian_reformed
+			}
+			set_global_flag = sky_god_egyptian
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti_reformed
+			}
+			set_global_flag = sky_god_inti
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl_reformed
+			}
+			set_global_flag = sky_god_nahuatl
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko_reformed
+			}
+			set_global_flag = sky_god_suomenusko
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = sky_god_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism_reformed
+			}
+			set_global_flag = sky_god_totemism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime_reformed
+			}
+			set_global_flag = sky_god_dreamtime
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_reformed
+			}
+			set_global_flag = sky_god_tengri
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism_reformed
+			}
+			set_global_flag = sky_god_muism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon_reformed
+			}
+			set_global_flag = sky_god_bon
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto_reformed
+			}
+			set_global_flag = sky_god_shinto
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+	}
+	option = {
+		name = roc_religion.41.e
+		trigger = {
+			NOT = {
+				has_global_flag = knowledge_god_hellenism
+				has_global_flag = knowledge_god_shamanism
+				has_global_flag = knowledge_god_ashurism
+				has_global_flag = knowledge_god_druidism
+				has_global_flag = knowledge_god_romuva
+				has_global_flag = knowledge_god_slavic
+				has_global_flag = knowledge_god_norse
+				has_global_flag = knowledge_god_egyptian
+				has_global_flag = knowledge_god_inti
+				has_global_flag = knowledge_god_nahuatl
+				has_global_flag = knowledge_god_suomenusko
+				has_global_flag = knowledge_god_mesoamerican_religion
+				has_global_flag = knowledge_god_totemism
+				has_global_flag = knowledge_god_dreamtime
+				has_global_flag = knowledge_god_tengri
+				has_global_flag = knowledge_god_muism
+				has_global_flag = knowledge_god_bon
+				has_global_flag = knowledge_god_shinto
+			}
+		}
+		if = {
+			limit = {
+				religion = hellenism_reformed
+			}
+			set_global_flag = knowledge_god_hellenism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism_reformed
+			}
+			set_global_flag = knowledge_god_shamanism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism_reformed
+			}
+			set_global_flag = knowledge_god_ashurism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism_reformed
+			}
+			set_global_flag = knowledge_god_druidism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva_reformed
+			}
+			set_global_flag = knowledge_god_romuva
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic_reformed
+			}
+			set_global_flag = knowledge_god_slavic
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_reformed
+			}
+			set_global_flag = knowledge_god_norse
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian_reformed
+			}
+			set_global_flag = knowledge_god_egyptian
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti_reformed
+			}
+			set_global_flag = knowledge_god_inti
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl_reformed
+			}
+			set_global_flag = knowledge_god_nahuatl
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko_reformed
+			}
+			set_global_flag = knowledge_god_suomenusko
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = knowledge_god_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism_reformed
+			}
+			set_global_flag = knowledge_god_totemism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime_reformed
+			}
+			set_global_flag = knowledge_god_dreamtime
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_reformed
+			}
+			set_global_flag = knowledge_god_tengri
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism_reformed
+			}
+			set_global_flag = knowledge_god_muism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon_reformed
+			}
+			set_global_flag = knowledge_god_bon
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto_reformed
+			}
+			set_global_flag = knowledge_god_shinto
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+	}
+	option = {
+		name = roc_religion.41.f
+		trigger = {
+			NOT = {
+				has_global_flag = sea_god_hellenism
+				has_global_flag = sea_god_shamanism
+				has_global_flag = sea_god_ashurism
+				has_global_flag = sea_god_druidism
+				has_global_flag = sea_god_romuva
+				has_global_flag = sea_god_slavic
+				has_global_flag = sea_god_norse
+				has_global_flag = sea_god_egyptian
+				has_global_flag = sea_god_inti
+				has_global_flag = sea_god_nahuatl
+				has_global_flag = sea_god_suomenusko
+				has_global_flag = sea_god_mesoamerican_religion
+				has_global_flag = sea_god_totemism
+				has_global_flag = sea_god_dreamtime
+				has_global_flag = sea_god_tengri
+				has_global_flag = sea_god_muism
+				has_global_flag = sea_god_bon
+				has_global_flag = sea_god_shinto
+			}
+		}
+		if = {
+			limit = {
+				religion = hellenism_reformed
+			}
+			set_global_flag = sea_god_hellenism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shamanism_reformed
+			}
+			set_global_flag = sea_god_shamanism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = ashurism_reformed
+			}
+			set_global_flag = sea_god_ashurism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = druidism_reformed
+			}
+			set_global_flag = sea_god_druidism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = romuva_reformed
+			}
+			set_global_flag = sea_god_romuva
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = slavic_reformed
+			}
+			set_global_flag = sea_god_slavic
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = norse_pagan_reformed
+			}
+			set_global_flag = sea_god_norse
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = egyptian_reformed
+			}
+			set_global_flag = sea_god_egyptian
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = inti_reformed
+			}
+			set_global_flag = sea_god_inti
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = nahuatl_reformed
+			}
+			set_global_flag = sea_god_nahuatl
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = suomenusko_reformed
+			}
+			set_global_flag = sea_god_suomenusko
+			country_event = {
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = mesoamerican_religion_reformed
+			}
+			set_global_flag = sea_god_mesoamerican_religion
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = totemism_reformed
+			}
+			set_global_flag = sea_god_totemism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = dreamtime_reformed
+			}
+			set_global_flag = sea_god_dreamtime
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tengri_pagan_reformed
+			}
+			set_global_flag = sea_god_tengri
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = muism_reformed
+			}
+			set_global_flag = sea_god_muism
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = tibetan_bon_reformed
+			}
+			set_global_flag = sea_god_bon
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+		else_if = {
+			limit = {
+				religion = shinto_reformed
+			}
+			set_global_flag = sea_god_shinto
+			country_event = { 
+				id = roc_religion.42
+			}
+		}
+	}
+}

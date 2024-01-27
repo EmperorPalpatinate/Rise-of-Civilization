@@ -1,0 +1,5 @@
+government = tribal
+primary_culture = disorganized
+religion = animism
+technology_group = muslim
+capital = 410

@@ -1,0 +1,228 @@
+imperial_crisis_disaster = {
+	potential = {
+		num_of_owned_provinces_with = {
+			value = 75
+			NOT = { culture = root }
+			is_overseas = no
+		}
+		is_free_or_tributary_trigger = yes
+	}
+
+	
+	
+	can_start = {
+		num_of_owned_provinces_with = {
+			value = 75
+			NOT = { culture = root }
+			is_overseas = no
+		}
+		OR = {
+			AND = {
+				tag = MNG
+				NOT = {
+					imperial_mandate = 30
+				}
+				NOT = { stability = -1 }
+			}
+			NOT = {
+				tag = MNG
+			}
+		}
+		OR = {
+			NOT = {	stability = -1 }
+			NOT = { legitimacy_equivalent = 30 }
+			NOT = { dip = 2 }
+			NOT = { adm = 2 }
+			NOT = { mil = 2 }
+			overextension_percentage = 0.60
+			corruption = 8
+			num_of_loans = 16
+			is_bankrupt = yes
+			inflation = 12
+			war_exhaustion = 12
+			unrest = 4
+		}
+	}
+	
+	
+	can_stop = {
+		stability = 1
+		legitimacy_equivalent = 50
+		dip = 2
+		adm = 2
+		mil = 2
+		NOT = { corruption = 5 }
+		NOT = { num_of_loans = 20 }
+		NOT = { is_bankrupt = yes }
+		NOT = { inflation = 10 }
+		NOT = { war_exhaustion = 6 }
+		NOT = { unrest = 4 }
+		OR = {
+			AND = {
+				tag = MNG
+				imperial_mandate = 30
+			}
+			NOT = {
+				tag = MNG
+			}
+		}
+	}	
+	
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { ADM = 3 }
+		}
+		modifier = {
+			factor = -0.25
+			ADM = 4
+		}
+		modifier = {
+			factor = 1
+			inflation = 10
+		}
+		modifier = {
+			factor = -0.25
+			NOT = { inflation = 8 }
+		}
+		modifier = {
+			factor = 1
+			Or = {
+				num_of_loans = 20
+				is_bankrupt = yes
+			}
+		}
+		modifier = {
+			factor = -0.25
+			NOT = {
+				num_of_loans = 10
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = { DIP = 3 }
+		}
+		modifier = {
+			factor = -0.25
+			DIP = 4
+		}
+		modifier = {
+			factor = 1
+			NOT = { MIL = 3 }
+		}
+		modifier = {
+			factor = -0.25
+			MIL = 4
+		}
+		modifier = {
+			factor = 0.5
+			overextension_percentage = 0.20
+		}
+		modifier = {
+			factor = -0.25
+			NOT = { overextension_percentage = 0.20 }
+		}
+		modifier = {
+			factor = 1
+			revolt_percentage = 0.10
+		}
+		modifier = {
+			factor = -0.25
+			NOT = { revolt_percentage = 0.10 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = -0.20
+			stability = -1
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = -0.25
+			stability = 2
+		}
+		modifier = {
+			factor = 0.50
+			average_unrest = 4
+		}
+		modifier = {
+			factor = 1
+			corruption = 6
+		}
+		modifier = {
+			factor = -0.25
+			NOT = {
+				corruption = 4
+			}
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = -0.25
+			NOT = { war_exhaustion = 4 }
+		}
+	}
+	
+	
+	
+	can_end = {
+		stability = 1
+		legitimacy_equivalent = 50
+		dip = 2
+		adm = 2
+		mil = 2
+		NOT = { corruption = 5 }
+		NOT = { num_of_loans = 20 }
+		NOT = { is_bankrupt = yes }
+		NOT = { inflation = 10 }
+		NOT = { war_exhaustion = 6 }
+		NOT = { unrest = 4 }
+	}
+	
+
+	modifier = {
+		global_unrest = 4
+		discipline = -0.10
+		army_morale = -0.20
+		global_tax_modifier = -0.40
+		technology_cost = 0.10
+		all_power_costs = 0.10
+		yearly_corruption = 0.25
+		stability_cost_modifier = 2.00
+		global_trade_power = -0.2
+	}	
+	
+	
+	on_start = civil_war.101
+	on_end = civil_war.100
+	
+	on_monthly = {
+		events = {
+			flavor_lxa.1
+			flavor_lxa.2
+			flavor_lxa.3
+		}
+		random_events = { 
+			100 = imperial_disaster.1
+			100 = civil_war.111
+			100 = civil_war.113
+			100 = civil_war.122
+			100 = civil_war.123
+			100 = civil_war.5
+			100 = civil_war.116
+			100 = civil_war.7
+			100 = civil_war.118
+			100 = civil_war.9
+			100 = civil_war.10
+			100 = civil_war.12
+		}
+	}
+}

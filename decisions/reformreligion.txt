@@ -1,0 +1,245 @@
+country_decisions = {
+
+	reform_religion = {
+		major = yes
+		potential = {
+			OR = {
+				religion = hellenism
+				religion = shamanism
+				religion = ashurism
+				religion = druidism
+				religion = romuva
+				religion = slavic
+				religion = norse_pagan_unreformed
+				religion = egyptian
+				religion = inti
+				religion = nahuatl
+				religion = suomenusko
+				religion = mesoamerican_religion
+				religion = totemism
+				religion = dreamtime
+				religion = tengri_pagan_unreformed
+				religion = muism
+				religion = tibetan_bon
+				religion = shinto
+			}
+			OR = {
+				AND = {
+					religion = hellenism
+					NOT = {
+						any_country = {
+							religion = hellenism_reformed
+						}
+						any_province = {
+							religion = hellenism_reformed
+						}
+					}
+				}
+				AND = {
+					religion = shamanism
+					NOT = {
+						any_country = {
+							religion = shamanism_reformed
+						}
+						any_province = {
+							religion = shamanism_reformed
+						}
+					}
+				}
+				AND = {
+					religion = ashurism
+					NOT = {
+						any_country = {
+							religion = ashurism_reformed
+						}
+						any_province = {
+							religion = ashurism_reformed
+						}
+					}
+				}
+				AND = {
+					religion = druidism
+					NOT = {
+						any_country = {
+							religion = druidism_reformed
+						}
+						any_province = {
+							religion = druidism_reformed
+						}
+					}
+				}
+				AND = {
+					religion = romuva
+					NOT = {
+						any_country = {
+							religion = romuva_reformed
+						}
+						any_province = {
+							religion = romuva_reformed
+						}
+					}
+				}
+				AND = {
+					religion = slavic
+					NOT = {
+						any_country = {
+							religion = slavic_reformed
+						}
+						any_province = {
+							religion = slavic_reformed
+						}
+					}
+				}
+				AND = {
+					religion = norse_pagan_unreformed
+					NOT = {
+						any_country = {
+							religion = norse_pagan_reformed
+						}
+						any_province = {
+							religion = norse_pagan_reformed
+						}
+					}
+				}
+				AND = {
+					religion = egyptian
+					NOT = {
+						any_country = {
+							religion = egyptian_reformed
+						}
+						any_province = {
+							religion = egyptian_reformed
+						}
+					}
+				}
+				AND = {
+					religion = inti
+					NOT = {
+						any_country = {
+							religion = inti_reformed
+						}
+						any_province = {
+							religion = inti_reformed
+						}
+					}
+				}
+				AND = {
+					religion = nahuatl
+					NOT = {
+						any_country = {
+							religion = nahuatl_reformed
+						}
+						any_province = {
+							religion = nahuatl_reformed
+						}
+					}
+				}
+				AND = {
+					religion = suomenusko
+					NOT = {
+						any_country = {
+							religion = suomenusko_reformed
+						}
+						any_province = {
+							religion = suomenusko_reformed
+						}
+					}
+				}
+				AND = {
+					religion = mesoamerican_religion
+					NOT = {
+						any_country = {
+							religion = mesoamerican_religion_reformed
+						}
+						any_province = {
+							religion = mesoamerican_religion_reformed
+						}
+					}
+				}
+				AND = {
+					religion = totemism
+					NOT = {
+						any_country = {
+							religion = totemism_reformed
+						}
+						any_province = {
+							religion = totemism_reformed
+						}
+					}
+				}
+				AND = {
+					religion = dreamtime
+					NOT = {
+						any_country = {
+							religion = dreamtime_reformed
+						}
+						any_province = {
+							religion = dreamtime_reformed
+						}
+					}
+				}
+				AND = {
+					religion = tengri_pagan_unreformed
+					NOT = {
+						any_country = {
+							religion = tengri_pagan_reformed
+						}
+						any_province = {
+							religion = tengri_pagan_reformed
+						}
+					}
+				}
+				AND = {
+					religion = muism
+					NOT = {
+						any_country = {
+							religion = muism_reformed
+						}
+						any_province = {
+							religion = muism_reformed
+						}
+					}
+				}
+				AND = {
+					religion = tibetan_bon
+					NOT = {
+						any_country = {
+							religion = tibetan_bon_reformed
+						}
+						any_province = {
+							religion = tibetan_bon_reformed
+						}
+					}
+				}
+				AND = {
+					religion = shinto
+					NOT = {
+						any_country = {
+							religion = shinto_reformed
+						}
+						any_province = {
+							religion = shinto_reformed
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 15
+				religion = ROOT
+			}
+			is_year = 750
+		}
+		
+		effect = {
+			country_event = { 
+				id = roc_religion.40
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

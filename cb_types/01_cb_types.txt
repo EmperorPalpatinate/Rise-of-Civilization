@@ -1,0 +1,321 @@
+# INSTRUCTIONS:
+# -------------
+# is_triggered_only - Triggered from within the code or by event effects. DO NOT REMOVE THE STOCK ONES.
+# months - The number of months this CB will be valid. Only works for triggered CBs.
+# prerequisites - A condition that automatically activates a CB. Does not work for triggered CBs.
+# no_opinion_hit - If yes you get no negative opinion from this
+#
+# ROOT = attacker
+# FROM = target
+#
+# NOTE: The order in which the peace options are listed is the order in which the AI will normally prioritize them in peace treaties
+#
+# TRIGGERED - Triggered from within the code or by event effects
+# --------------------------------------------------------------
+
+# Invasion
+
+cb_invasion = {
+	exclusive = yes
+
+	prerequisites = {
+		ruler_has_personality = person_of_destiny_personality
+		is_neighbor_of = FROM
+	}
+	
+	war_goal = invasion
+}
+# Foreign Invasion
+cb_foreign_invasion = {
+	valid_for_subject = {
+	
+	prerequisites = {
+		FROM = {
+			num_of_owned_provinces_with = {
+				value = 75
+				NOT = { culture = root }
+				is_overseas = no
+			}
+		}
+		is_neighbor_of = FROM
+		ROOT = {
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 75
+				}
+			}
+		}	
+	}
+	
+	war_goal = foreign_invasion
+}
+		
+# Revolt War
+cb_revolt_war = {
+	valid_for_subject = no
+	exclusive = yes
+
+	prerequisites = {
+		ROOT = {
+			has_country_flag = fote_civil_war
+			NOT = { 
+				had_country_flag = { 
+					flag = fote_civil_war
+					days = 14600
+				}
+			}
+		}
+		FROM = {
+			has_country_flag = fote_civil_war
+			NOT = { 
+				had_country_flag = { 
+					flag = fote_civil_war
+					days = 14600
+				}
+			}
+		}
+		OR = {
+			AND = {
+				ROOT = {
+					has_country_flag = fote_crumbling_empire
+					NOT = {
+						had_country_flag = {
+							flag = fote_crumbling_empire
+							days = 14600
+						}
+					}
+				}
+				FROM = {
+					OR = {
+						NOT = {
+							has_country_flag = fote_crumbling_empire
+						}
+						had_country_flag = {
+							flag = fote_crumbling_empire
+							days = 14600
+						}
+					}
+				}
+			}
+			AND = {
+				ROOT = {
+					OR = {
+						NOT = {
+							has_country_flag = fote_crumbling_empire
+						}
+						had_country_flag = {
+							flag = fote_crumbling_empire
+							days = 14600
+						}
+					}
+				}
+				FROM = {
+					has_country_flag = fote_crumbling_empire
+					NOT = {
+						had_country_flag = {
+							flag = fote_crumbling_empire
+							days = 14600
+						}
+					}
+				}
+			}
+			AND = {
+				ROOT = {
+					NOT = {
+						has_country_flag = fote_crumbling_empire
+					}
+				}
+				FROM = {
+					NOT = {
+						has_country_flag = fote_crumbling_empire
+					}
+				}
+			}
+		}
+	}
+
+
+	can_use_peace_treaty = {
+		who = FROM
+		treaty = revolt_annex
+		treaty = occupied_annex
+	}
+
+	attacker_disabled_po = {
+		po_release_vassals
+		po_release_annexed
+		po_become_vassal
+		po_subjugate_vassal
+		po_become_tributary_state
+		po_subjugate_tributary_state
+		po_form_personal_union
+	}
+	war_goal = defend_capital_revolt
+}
+
+# Spread Communism
+cb_spread_communism = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		is_subject = no
+		has_reform = communist_government
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			NOT = { has_reform = communist_government }
+		}
+	}
+
+	war_goal = war_goal_spread_communism
+}
+
+# Spread Fascism
+cb_spread_fascism = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		is_subject = no
+		has_reform = fascist_government
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			NOT = { has_reform = fascist_government }
+		}
+	}
+
+	war_goal = war_goal_spread_fascism
+}
+
+# Export Democracy
+cb_spread_democracy = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		is_subject = no
+		has_reform = democracy_reform
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			OR = {
+				has_reform = dictatorial_rule
+				has_reform = authoritarian_rule
+				has_reform = single_party_system
+			}
+		}
+	}
+
+	war_goal = war_goal_change_government
+}
+
+# Imperial Rome cb
+cb_roman_imperial = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		has_country_flag = rome_formed
+		tag = ROM
+		is_subject = no
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = { #Imperial borders
+			NOT = { is_subject_of = ROOT }
+			any_owned_province = {
+				OR = {
+					region = france_region
+					region = iberia_region
+					region = italy_region
+					region = balkan_region
+					region = low_countries_region
+					region = british_isles_region
+					region = anatolia_region
+					region = mashriq_region
+					region = egypt_region
+					region = maghreb_region
+					region = north_german_region
+					region = south_german_region
+				}
+			}
+		}
+		is_neighbor_of = FROM
+	}
+	
+	war_goal = superiority_roman_imperialism
+}
+
+# Caliphal Subjugation
+cb_caliphal_subjugation = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		has_reform = caliphate_reform
+		is_subject = no
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			religion_group = muslim
+			NOT = { is_subject_of = ROOT }
+		}
+		is_neighbor_of = FROM
+	}
+	
+	war_goal = superiority_caliphal_subjugation
+}
+
+# Sphere country
+#cb_sphere_of_influence = {
+#	valid_for_subject = no
+#	
+#	prerequisites = {
+#		is_great_power = yes
+#		adm_tech = 77
+#		FROM = {
+#			NOT = { is_subject_of = ROOT }
+#			is_great_power = no
+#		}
+#		
+#		is_revolution_target = no
+#	}
+#	
+#	war_goal = superiority_sphere
+#	
+#	attacker_disabled_po = {
+#		po_annex
+#		po_demand_provinces
+#		po_revoke_cores
+#		po_release_vassals
+#		po_release_annexed
+#		po_return_cores
+#	}
+#}
+
+cb_salic_reunification = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 600
+	
+	prerequisites_self = {
+		has_reform = salic_reform
+		is_subject = no
+	}
+
+	prerequisites = {
+		FROM = {
+			has_reform = salic_reform
+			is_subject = no
+		}
+	}
+
+	war_goal = take_capital_salic
+}
